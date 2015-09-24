@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9EEE2693474FAA4DB06D7F02 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0489BC1E3C34BB09E1C8361 /* libPods.a */; };
+		EA1C12371BB436CE0085CC2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1C12361BB436CE0085CC2F /* main.m */; };
+		EA1C123A1BB436CE0085CC2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1C12391BB436CE0085CC2F /* AppDelegate.m */; };
+		EA1C123D1BB436CE0085CC2F /* DYMRollingBannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1C123C1BB436CE0085CC2F /* DYMRollingBannerVC.m */; };
+		EA1C12401BB436CE0085CC2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1C123E1BB436CE0085CC2F /* Main.storyboard */; };
+		EA1C12421BB436CE0085CC2F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA1C12411BB436CE0085CC2F /* Images.xcassets */; };
+		EA1C12451BB436CE0085CC2F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1C12431BB436CE0085CC2F /* LaunchScreen.xib */; };
+		EA1C12511BB436CE0085CC2F /* DYMRollingBannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1C12501BB436CE0085CC2F /* DYMRollingBannerTests.m */; };
+		EA1C125C1BB439CA0085CC2F /* DYMBannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1C125B1BB439CA0085CC2F /* DYMBannerVC.m */; };
+		EA1C125F1BB440550085CC2F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1C125E1BB440550085CC2F /* RootViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA1C124B1BB436CE0085CC2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA1C12291BB436CD0085CC2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA1C12301BB436CE0085CC2F;
+			remoteInfo = DYMRollingBanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A9652CA9372FD0B00EEF469 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7450C9DA69827462706EEE96 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A0489BC1E3C34BB09E1C8361 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1C12311BB436CE0085CC2F /* DYMRollingBanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYMRollingBanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1C12351BB436CE0085CC2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA1C12361BB436CE0085CC2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA1C12381BB436CE0085CC2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA1C12391BB436CE0085CC2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EA1C123B1BB436CE0085CC2F /* DYMRollingBannerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYMRollingBannerVC.h; sourceTree = "<group>"; };
+		EA1C123C1BB436CE0085CC2F /* DYMRollingBannerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYMRollingBannerVC.m; sourceTree = "<group>"; };
+		EA1C123F1BB436CE0085CC2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA1C12411BB436CE0085CC2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EA1C12441BB436CE0085CC2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EA1C124A1BB436CE0085CC2F /* DYMRollingBannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DYMRollingBannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1C124F1BB436CE0085CC2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA1C12501BB436CE0085CC2F /* DYMRollingBannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYMRollingBannerTests.m; sourceTree = "<group>"; };
+		EA1C125A1BB439CA0085CC2F /* DYMBannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMBannerVC.h; sourceTree = "<group>"; };
+		EA1C125B1BB439CA0085CC2F /* DYMBannerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMBannerVC.m; sourceTree = "<group>"; };
+		EA1C125D1BB440550085CC2F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		EA1C125E1BB440550085CC2F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA1C122E1BB436CE0085CC2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EEE2693474FAA4DB06D7F02 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA1C12471BB436CE0085CC2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3830BBCD7AAE5B62EE0F9B88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A9652CA9372FD0B00EEF469 /* Pods.debug.xcconfig */,
+				7450C9DA69827462706EEE96 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E0EB3E032194F7F39E2A1FC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0489BC1E3C34BB09E1C8361 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA1C12281BB436CD0085CC2F = {
+			isa = PBXGroup;
+			children = (
+				EA1C12331BB436CE0085CC2F /* DYMRollingBanner */,
+				EA1C124D1BB436CE0085CC2F /* DYMRollingBannerTests */,
+				EA1C12321BB436CE0085CC2F /* Products */,
+				3830BBCD7AAE5B62EE0F9B88 /* Pods */,
+				E0EB3E032194F7F39E2A1FC4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EA1C12321BB436CE0085CC2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA1C12311BB436CE0085CC2F /* DYMRollingBanner.app */,
+				EA1C124A1BB436CE0085CC2F /* DYMRollingBannerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA1C12331BB436CE0085CC2F /* DYMRollingBanner */ = {
+			isa = PBXGroup;
+			children = (
+				EA1C12381BB436CE0085CC2F /* AppDelegate.h */,
+				EA1C12391BB436CE0085CC2F /* AppDelegate.m */,
+				EA1C123B1BB436CE0085CC2F /* DYMRollingBannerVC.h */,
+				EA1C123C1BB436CE0085CC2F /* DYMRollingBannerVC.m */,
+				EA1C125A1BB439CA0085CC2F /* DYMBannerVC.h */,
+				EA1C125B1BB439CA0085CC2F /* DYMBannerVC.m */,
+				EA1C123E1BB436CE0085CC2F /* Main.storyboard */,
+				EA1C12411BB436CE0085CC2F /* Images.xcassets */,
+				EA1C12431BB436CE0085CC2F /* LaunchScreen.xib */,
+				EA1C12341BB436CE0085CC2F /* Supporting Files */,
+				EA1C125D1BB440550085CC2F /* RootViewController.h */,
+				EA1C125E1BB440550085CC2F /* RootViewController.m */,
+			);
+			path = DYMRollingBanner;
+			sourceTree = "<group>";
+		};
+		EA1C12341BB436CE0085CC2F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA1C12351BB436CE0085CC2F /* Info.plist */,
+				EA1C12361BB436CE0085CC2F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA1C124D1BB436CE0085CC2F /* DYMRollingBannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA1C12501BB436CE0085CC2F /* DYMRollingBannerTests.m */,
+				EA1C124E1BB436CE0085CC2F /* Supporting Files */,
+			);
+			path = DYMRollingBannerTests;
+			sourceTree = "<group>";
+		};
+		EA1C124E1BB436CE0085CC2F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA1C124F1BB436CE0085CC2F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA1C12301BB436CE0085CC2F /* DYMRollingBanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA1C12541BB436CE0085CC2F /* Build configuration list for PBXNativeTarget "DYMRollingBanner" */;
+			buildPhases = (
+				A36F04FE958F5FD4BE4DD3D2 /* Check Pods Manifest.lock */,
+				EA1C122D1BB436CE0085CC2F /* Sources */,
+				EA1C122E1BB436CE0085CC2F /* Frameworks */,
+				EA1C122F1BB436CE0085CC2F /* Resources */,
+				DB904791468685062C0C8AF3 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DYMRollingBanner;
+			productName = DYMRollingBanner;
+			productReference = EA1C12311BB436CE0085CC2F /* DYMRollingBanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA1C12491BB436CE0085CC2F /* DYMRollingBannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA1C12571BB436CE0085CC2F /* Build configuration list for PBXNativeTarget "DYMRollingBannerTests" */;
+			buildPhases = (
+				EA1C12461BB436CE0085CC2F /* Sources */,
+				EA1C12471BB436CE0085CC2F /* Frameworks */,
+				EA1C12481BB436CE0085CC2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA1C124C1BB436CE0085CC2F /* PBXTargetDependency */,
+			);
+			name = DYMRollingBannerTests;
+			productName = DYMRollingBannerTests;
+			productReference = EA1C124A1BB436CE0085CC2F /* DYMRollingBannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA1C12291BB436CD0085CC2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Dong Yiming";
+				TargetAttributes = {
+					EA1C12301BB436CE0085CC2F = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					EA1C12491BB436CE0085CC2F = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = EA1C12301BB436CE0085CC2F;
+					};
+				};
+			};
+			buildConfigurationList = EA1C122C1BB436CD0085CC2F /* Build configuration list for PBXProject "DYMRollingBanner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA1C12281BB436CD0085CC2F;
+			productRefGroup = EA1C12321BB436CE0085CC2F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA1C12301BB436CE0085CC2F /* DYMRollingBanner */,
+				EA1C12491BB436CE0085CC2F /* DYMRollingBannerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA1C122F1BB436CE0085CC2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA1C12401BB436CE0085CC2F /* Main.storyboard in Resources */,
+				EA1C12451BB436CE0085CC2F /* LaunchScreen.xib in Resources */,
+				EA1C12421BB436CE0085CC2F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA1C12481BB436CE0085CC2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A36F04FE958F5FD4BE4DD3D2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DB904791468685062C0C8AF3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA1C122D1BB436CE0085CC2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA1C123D1BB436CE0085CC2F /* DYMRollingBannerVC.m in Sources */,
+				EA1C125C1BB439CA0085CC2F /* DYMBannerVC.m in Sources */,
+				EA1C123A1BB436CE0085CC2F /* AppDelegate.m in Sources */,
+				EA1C12371BB436CE0085CC2F /* main.m in Sources */,
+				EA1C125F1BB440550085CC2F /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA1C12461BB436CE0085CC2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA1C12511BB436CE0085CC2F /* DYMRollingBannerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA1C124C1BB436CE0085CC2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA1C12301BB436CE0085CC2F /* DYMRollingBanner */;
+			targetProxy = EA1C124B1BB436CE0085CC2F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA1C123E1BB436CE0085CC2F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA1C123F1BB436CE0085CC2F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA1C12431BB436CE0085CC2F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA1C12441BB436CE0085CC2F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA1C12521BB436CE0085CC2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA1C12531BB436CE0085CC2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA1C12551BB436CE0085CC2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A9652CA9372FD0B00EEF469 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DYMRollingBanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EA1C12561BB436CE0085CC2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7450C9DA69827462706EEE96 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DYMRollingBanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EA1C12581BB436CE0085CC2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DYMRollingBannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DYMRollingBanner.app/DYMRollingBanner";
+			};
+			name = Debug;
+		};
+		EA1C12591BB436CE0085CC2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DYMRollingBannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DYMRollingBanner.app/DYMRollingBanner";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA1C122C1BB436CD0085CC2F /* Build configuration list for PBXProject "DYMRollingBanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA1C12521BB436CE0085CC2F /* Debug */,
+				EA1C12531BB436CE0085CC2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA1C12541BB436CE0085CC2F /* Build configuration list for PBXNativeTarget "DYMRollingBanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA1C12551BB436CE0085CC2F /* Debug */,
+				EA1C12561BB436CE0085CC2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA1C12571BB436CE0085CC2F /* Build configuration list for PBXNativeTarget "DYMRollingBannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA1C12581BB436CE0085CC2F /* Debug */,
+				EA1C12591BB436CE0085CC2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA1C12291BB436CD0085CC2F /* Project object */;
+}
