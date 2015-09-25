@@ -6,7 +6,7 @@ Recently, I've been searching for a scrolling banner view on the hub, but no luc
 
 ### Why you should use it   
 
-* It was writen with clean code and is very easy to use.    
+* It's writen with clean code and very easy to use.    
 * Support `AutoLayout` perfectly.    
 * It internally implemented a memory reusing mechanism, so it behaves faster and costs less memory.    
 * It can roll banners infinitely in a cycle patter, that mean it shows the first banner after the last one. 
