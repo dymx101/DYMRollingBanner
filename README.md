@@ -6,11 +6,13 @@ Recently, I've been searching for a scrolling banner view on the hub, but no luc
 
 ### Why you should use it   
 
-* It's writen with clean code and very easy to use.    
-* Support `AutoLayout` perfectly.    
+* It's writen with clean code and very easy to use.  
+* It supports both local and remote images.    
+* Auto Rolling will be paused when dragging, and resumed when dragging ended.    
 * It internally implements a memory reusing mechanism, so it behaves faster and costs less memory.    
 * It can roll banners infinitely in a cycle patter, that mean it shows the first banner after the last one. 
-* It uses block as the handler to handle image tapping events.
+* It uses block as the handler to handle image tapping events.    
+* Support `AutoLayout` perfectly.  
 * It's free :-) 
 
  
@@ -24,18 +26,21 @@ Secondly, Create a `DYMRollingBannerVC` object, and install it as the child view
 
 Finally, feed it with you image URLs and you are good to go!
 ```objective-c
-DYMRollingBannerVC *vc = (DYMRollingBannerVC *)segue.destinationViewController;
-        vc.rollingInterval = 5;
-        vc.rollingImageURLs = @[@"http://www.drpsychmom.com/wp-content/uploads/2014/10/large_4278047231.jpg"    // bridge
-                                , @"https://c2.staticflickr.com/4/3345/5832660048_55f8b0935b.jpg"               // girl
-                                , @"http://epaper.syd.com.cn/sywb/res/1/20080108/42241199752656275.jpg"         // another puppy
+DYMRollingBannerVC *vc = [DYMRollingBannerVC new];
+
+vc.rollingInterval = 5;
+vc.rollingImages = @[@"http://www.drpsychmom.com/wp-content/uploads/2014/10/large_4278047231.jpg"
+                                , @"https://c2.staticflickr.com/4/3345/5832660048_55f8b0935b.jpg"
+                                , @"http://epaper.syd.com.cn/sywb/res/1/20080108/42241199752656275.jpg"
+                                , [UIImage imageNamed:@"001"]
+                                , [UIImage imageNamed:@"002"]
                                 ];
         
-        [vc addBannerTapHandler:^(NSInteger whichIndex) {
-            NSLog(@"banner tapped, index = %@", @(whichIndex));
-        }];
+  [vc addBannerTapHandler:^(NSInteger whichIndex) {
+        NSLog(@"banner tapped, index = %@", @(whichIndex));
+  }];
         
-        [vc startRolling];
+  [vc startRolling];
 ```
 
 ### Notice    
