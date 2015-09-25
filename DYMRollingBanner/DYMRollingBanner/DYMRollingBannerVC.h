@@ -7,18 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DYMBannerVC.h"
 
 /// The view controller which rolling a group of banner images
 @interface DYMRollingBannerVC : UIPageViewController
 /// image urls for the rolling banner
-@property (nonatomic, copy)     NSArray             *rollingImageURLs;
+@property (nonatomic, copy)     NSArray                 *rollingImageURLs;
 /// time interval between the rolling
-@property (nonatomic, assign)   NSTimeInterval      rollingInterval;
+@property (nonatomic, assign)   NSTimeInterval          rollingInterval;
+
 
 /// start rolling
 -(void)startRolling;
 /// stop rolling
 -(void)stopRolling;
+
+-(void)addBannerTapHandler:(DYMBannderTapHandler)handler;
 
 @end
 

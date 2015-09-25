@@ -10,17 +10,23 @@
 #import <Masonry/Masonry.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
-@interface DYMBannerVC ()
+@interface DYMBannerVC () {
 
-@property (nonatomic, strong)         UIImageView             *imageView;
+    UIImageView         *_imageView;
+    UIButton            *_btnTap;
+    
+}
 
 @end
+
+
+
 
 @implementation DYMBannerVC
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-//    self.view.backgroundColor = [[UIColor orangeColor] colorWithAlphaComponent:0.9];
     
     _imageView = [UIImageView new];
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -29,10 +35,27 @@
     [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
+    
+    ///
+    _btnTap = [UIButton new];
+    [_btnTap addTarget:self action:@selector(tapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_btnTap];
+    [_btnTap mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [self loadImage];
+}
+
+
+
+#pragma mark -
+-(void)tapped:(id)sender {
+    if (_bannerTapHandler) {
+        _bannerTapHandler(self.index);
+    }
 }
 
 -(void)setImageURL:(NSString *)imageURL {
@@ -51,6 +74,8 @@
     [_imageView sd_setImageWithURL:[NSURL URLWithString:_imageURL]
                   placeholderImage:_placeHolder options:SDWebImageProgressiveDownload];
 }
+
+
 
 
 @end
