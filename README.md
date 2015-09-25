@@ -8,7 +8,7 @@ Recently, I've been searching for a scrolling banner view on the hub, but no luc
 
 * It's writen with clean code and very easy to use.    
 * Support `AutoLayout` perfectly.    
-* It internally implemented a memory reusing mechanism, so it behaves faster and costs less memory.    
+* It internally implements a memory reusing mechanism, so it behaves faster and costs less memory.    
 * It can roll banners infinitely in a cycle patter, that mean it shows the first banner after the last one. 
 * It uses block as the handler to handle image tapping events.
 * It's free :-) 
