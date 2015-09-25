@@ -1,16 +1,16 @@
 # DYMRollingBanner
 `DYMRollingBanner` is a clean and easy-to-use banner rolling control for your `homepage` screen.
 
-### Why did I write this shit
-Recently, I've been searching for a scrolling banner view on the hub, but no luck... none of them satisfies me, so I decide to write my own.
+### Why do I write it ?
+Recently, I've been searching for a scrolling banner view on the hub, but no luck...Some of the code I found are too old, they don't support Autolayout, and some don't scrolls infinitely... none of them satisfies me. So,  I finally decided to write a brand new control for this usage...and here you go!
 
 ### Why you should use it   
 
 * It's writen with clean code and very easy to use.  
 * It supports both local and remote images.    
 * Auto Rolling will be paused when dragging, and resumed when dragging ended.    
-* It internally implements a memory reusing mechanism, so it behaves faster and costs less memory.    
-* It can roll banners infinitely in a cycle patter, that mean it shows the first banner after the last one. 
+* Internally it has memory cache which makes it lightning fast and less memory consuming.    
+* It rolls banners infinitely in a cycle patter, that mean it shows the first banner after the last one. 
 * It uses block as the handler to handle image tapping events.    
 * Support `AutoLayout` perfectly.  
 * It's free :-) 
@@ -26,14 +26,14 @@ Secondly, Create a `DYMRollingBannerVC` object, and install it as the child view
 
 Finally, feed it with you image URLs and you are good to go!
 ```objective-c
-DYMRollingBannerVC *vc = [DYMRollingBannerVC new];
+DYMRollingBannerVC *vc = [[DYMRollingBannerVC alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
 
 vc.rollingInterval = 5;
 vc.rollingImages = @[@"http://www.drpsychmom.com/wp-content/uploads/2014/10/large_4278047231.jpg"
                                 , @"https://c2.staticflickr.com/4/3345/5832660048_55f8b0935b.jpg"
                                 , @"http://epaper.syd.com.cn/sywb/res/1/20080108/42241199752656275.jpg"
-                                , [UIImage imageNamed:@"001"]
-                                , [UIImage imageNamed:@"002"]
+                                , [UIImage imageNamed:@"001"]    // Local Image
+                                , [UIImage imageNamed:@"002"]    // Locak Image
                                 ];
         
   [vc addBannerTapHandler:^(NSInteger whichIndex) {
