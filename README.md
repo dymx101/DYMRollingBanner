@@ -1,5 +1,7 @@
 # DYMRollingBanner
-`DYMRollingBanner` is a clean and easy-to-use banner rolling control for your `homepage` screen.
+`DYMRollingBanner` is a clean and easy-to-use banner rolling control for your `homepage` screen.    
+
+![DEMO Gif](http://cdn.cocimg.com/bbs/attachment/Fid_19/19_88471_6119c1d8323275c.gif)
 
 ### Why do I write it ?
 Recently, I've been searching for a scrolling banner view on the hub, but no luck...Some of the code I found are too old, they don't support Autolayout, and some don't scrolls infinitely... none of them satisfies me. So,  I finally decided to write a brand new control for this usage...and here you go!
