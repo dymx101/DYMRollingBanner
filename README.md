@@ -21,14 +21,14 @@ Why do I write this ? Well...Actually, I've been searching for a scrolling banne
 
 Unlike many other banner scrolling controls, `DYMRollingBanner` doesn't use `UIScrollingView` or its subclasses `UITableview` or `UICollectionView`, instead it take full advantage of `UIPageViewController` which is natually an `INFINITE` controller.    
     
-To integrate `DYMRollingBanner', firstly, you need to copy the assciated files into your project, and import `DYMRollingBannerVC.h` file:    
+To integrate `DYMRollingBanner`, firstly, you need to copy the assciated files into your project, and import `DYMRollingBannerVC.h` file:    
 ```objective-c
 #import "DYMRollingBannerVC.h"
 ```
 
 Secondly, Create a `DYMRollingBannerVC` object, and install it as a child view controller.    
 
-Finally, feed it with you image URLs or `UIImage` object and you are good to go!    
+Finally, feed it with you image URLs or `UIImage` object:       
 ```objective-c
 DYMRollingBannerVC *vc = [[DYMRollingBannerVC alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
 
@@ -46,6 +46,8 @@ vc.rollingImages = @[@"http://www.drpsychmom.com/wp-content/uploads/2014/10/larg
         
   [vc startRolling];
 ```
+And you are good to go!  
+
 
 ### Notice    
 This code is using `Masonry` for Autolayout, and `SDWebImage` for image downloading, so please remember to add these two libraries to your project when integrating `DYMRollingBanner`.    
