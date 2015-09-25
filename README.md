@@ -2,7 +2,7 @@
 `DYMRollingBanner` is a clean and easy-to-use banner rolling control for your `homepage` screen.
 
 ### Why did I write this shit
-Recently, I've been searching for a scrolling banner view on the hub, but no luck... none of them satisfied me, so I decided to write my own.
+Recently, I've been searching for a scrolling banner view on the hub, but no luck... none of them satisfies me, so I decide to write my own.
 
 ### Why you should use it   
 
