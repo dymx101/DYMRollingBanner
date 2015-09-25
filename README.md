@@ -1,26 +1,26 @@
 # DYMRollingBanner
-`DYMRollingBanner` is a clean and easy-to-use banner rolling control for your homepage screen.
+`DYMRollingBanner` is a clean and easy-to-use banner rolling control for your `homepage` screen.
 
 ### Why did I write this shit
 Recently, I've been searching for a scrolling banner view on the hub, but no luck... none of them satisfied me, so I decided to write my own.
 
 ### Why you should use it   
 
-* It was writen in clean code and very easy to use    
-* Support AutoLayout perfectly    
-* It's internally implemented memory reusing mechanism, so it behaves real fast and costs lower memory    
-* It can rolling infinitely in a cycle patter, that mean it shows the first banner after the last one 
-* It uses block ad the handler to handle image tapping event
+* It was writen with clean code and is very easy to use.    
+* Support `AutoLayout` perfectly.    
+* It internally implemented a memory reusing mechanism, so it behaves faster and costs less memory.    
+* It can roll banners infinitely in a cycle patter, that mean it shows the first banner after the last one. 
+* It uses block as the handler to handle image tapping events.
 * It's free :-) 
 
  
 ### How to use    
-Firstly  
+Firstly...  
 ```objective-c
 #import "DYMRollingBannerVC.h"
 ```
 
-Secondly, Create a `DYMRollingBannerVC` object, and install it as the child view controller of your homepage view controller.   
+Secondly, Create a `DYMRollingBannerVC` object, and install it as the child view controller of your `homepage` view controller.   
 
 Finally, feed it with you image URLs and you are good to go!
 ```objective-c
