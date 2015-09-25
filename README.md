@@ -17,16 +17,18 @@ Why do I write this ? Well...Actually, I've been searching for a scrolling banne
 * 100% compatible with `AutoLayout`.      
 
  
-### Usage    
+### Usage     
+
+Unlike many other banner scrolling controls, `DYMRollingBanner` doesn't use `UIScrollingView` or its subclasses `UITableview` or `UICollectionView`, instead it take full advantage of `UIPageViewController` which is natually an `INFINITE` controller.    
     
-Firstly...  
+To integrate `DYMRollingBanner', firstly, you need to copy the assciated files into your project, and import `DYMRollingBannerVC.h` file:    
 ```objective-c
 #import "DYMRollingBannerVC.h"
 ```
 
-Secondly, Create a `DYMRollingBannerVC` object, and install it as a child view controller.
+Secondly, Create a `DYMRollingBannerVC` object, and install it as a child view controller.    
 
-Finally, feed it with you image URLs or `UIImage` object and you are good to go!
+Finally, feed it with you image URLs or `UIImage` object and you are good to go!    
 ```objective-c
 DYMRollingBannerVC *vc = [[DYMRollingBannerVC alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
 
