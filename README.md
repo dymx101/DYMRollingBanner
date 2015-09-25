@@ -38,6 +38,8 @@ DYMRollingBannerVC *vc = (DYMRollingBannerVC *)segue.destinationViewController;
         [vc startRolling];
 ```
 
+### Notice    
+This code is using `Masonry` for Autolayout, and `SDWebImage` for image downloading, so please remember to add these two libraries to your project when integrating `DYMRollingBanner`.    
 
 ## Contributing to this project
 
