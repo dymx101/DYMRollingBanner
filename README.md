@@ -1,32 +1,32 @@
 # DYMRollingBanner
-`DYMRollingBanner` is a clean and easy-to-use banner rolling control for your `homepage` screen.    
+`DYMRollingBanner` is a clean and easy-to-use banner rolling control for your app's `homepage` screen which need to show some rolling banners.    
 
 ![DEMO Gif](http://cdn.cocimg.com/bbs/attachment/Fid_19/19_88471_6119c1d8323275c.gif)
 
-### Why do I write it ?
-Recently, I've been searching for a scrolling banner view on the hub, but no luck...Some of the code I found are too old, they don't support Autolayout, and some don't scrolls infinitely... none of them satisfies me. So,  I finally decided to write a brand new control for this usage...and here you go!
+### Why
+Why do I write this ? Well...Actually, I've been searching for a scrolling banner view at github for a while, but no luck since some of the code I found are too old to support `Autolayout`, others don't scrolls infinitely... none of them satisfied me. Then,  I decided to do it myself, to write something cool...and finally,  here you go!
 
-### Why you should use it   
+### Features  
 
-* It's writen with clean code and very easy to use.  
-* It supports both local and remote images.    
-* Auto Rolling will be paused when dragging, and resumed when dragging ended.    
-* Internally it has memory cache which makes it lightning fast and less memory consuming.    
-* It rolls banners infinitely in a cycle patter, that mean it shows the first banner after the last one. 
-* It uses block as the handler to handle image tapping events.    
-* Support `AutoLayout` perfectly.  
-* It's free :-) 
+* Writen with clean code and very easy to use.    
+* Supports both local and remote images.    
+* Paused on dragging and resumes on releasing.    
+* Implements a memory cache which makes it lightning fast and less memory consuming.     
+* Infinite scrolling, which mean it  return to show the first banner when ended with the last one.     
+* Block based event handling.    
+* 100% compatible with `AutoLayout`.      
 
  
-### How to use    
+### Usage    
+    
 Firstly...  
 ```objective-c
 #import "DYMRollingBannerVC.h"
 ```
 
-Secondly, Create a `DYMRollingBannerVC` object, and install it as the child view controller of your `homepage` view controller.   
+Secondly, Create a `DYMRollingBannerVC` object, and install it as a child view controller.
 
-Finally, feed it with you image URLs and you are good to go!
+Finally, feed it with you image URLs or `UIImage` object and you are good to go!
 ```objective-c
 DYMRollingBannerVC *vc = [[DYMRollingBannerVC alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
 
