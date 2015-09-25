@@ -10,14 +10,14 @@
 		9EEE2693474FAA4DB06D7F02 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0489BC1E3C34BB09E1C8361 /* libPods.a */; };
 		EA1C12371BB436CE0085CC2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1C12361BB436CE0085CC2F /* main.m */; };
 		EA1C123A1BB436CE0085CC2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1C12391BB436CE0085CC2F /* AppDelegate.m */; };
-		EA1C123D1BB436CE0085CC2F /* DYMRollingBannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1C123C1BB436CE0085CC2F /* DYMRollingBannerVC.m */; };
 		EA1C12401BB436CE0085CC2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1C123E1BB436CE0085CC2F /* Main.storyboard */; };
 		EA1C12421BB436CE0085CC2F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA1C12411BB436CE0085CC2F /* Images.xcassets */; };
 		EA1C12451BB436CE0085CC2F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1C12431BB436CE0085CC2F /* LaunchScreen.xib */; };
 		EA1C12511BB436CE0085CC2F /* DYMRollingBannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1C12501BB436CE0085CC2F /* DYMRollingBannerTests.m */; };
-		EA1C125C1BB439CA0085CC2F /* DYMBannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1C125B1BB439CA0085CC2F /* DYMBannerVC.m */; };
 		EA1C125F1BB440550085CC2F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1C125E1BB440550085CC2F /* RootViewController.m */; };
-		EABE46311BB4D74E00901B88 /* DYMBannerPool.m in Sources */ = {isa = PBXBuildFile; fileRef = EABE46301BB4D74E00901B88 /* DYMBannerPool.m */; };
+		EABE46391BB4FBCE00901B88 /* DYMBannerPool.m in Sources */ = {isa = PBXBuildFile; fileRef = EABE46341BB4FBCE00901B88 /* DYMBannerPool.m */; };
+		EABE463A1BB4FBCE00901B88 /* DYMBannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EABE46361BB4FBCE00901B88 /* DYMBannerVC.m */; };
+		EABE463B1BB4FBCE00901B88 /* DYMRollingBannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EABE46381BB4FBCE00901B88 /* DYMRollingBannerVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,20 +39,20 @@
 		EA1C12361BB436CE0085CC2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EA1C12381BB436CE0085CC2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA1C12391BB436CE0085CC2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EA1C123B1BB436CE0085CC2F /* DYMRollingBannerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYMRollingBannerVC.h; sourceTree = "<group>"; };
-		EA1C123C1BB436CE0085CC2F /* DYMRollingBannerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYMRollingBannerVC.m; sourceTree = "<group>"; };
 		EA1C123F1BB436CE0085CC2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA1C12411BB436CE0085CC2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EA1C12441BB436CE0085CC2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EA1C124A1BB436CE0085CC2F /* DYMRollingBannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DYMRollingBannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1C124F1BB436CE0085CC2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA1C12501BB436CE0085CC2F /* DYMRollingBannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYMRollingBannerTests.m; sourceTree = "<group>"; };
-		EA1C125A1BB439CA0085CC2F /* DYMBannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMBannerVC.h; sourceTree = "<group>"; };
-		EA1C125B1BB439CA0085CC2F /* DYMBannerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMBannerVC.m; sourceTree = "<group>"; };
 		EA1C125D1BB440550085CC2F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		EA1C125E1BB440550085CC2F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		EABE462F1BB4D74E00901B88 /* DYMBannerPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMBannerPool.h; sourceTree = "<group>"; };
-		EABE46301BB4D74E00901B88 /* DYMBannerPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMBannerPool.m; sourceTree = "<group>"; };
+		EABE46331BB4FBCE00901B88 /* DYMBannerPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMBannerPool.h; sourceTree = "<group>"; };
+		EABE46341BB4FBCE00901B88 /* DYMBannerPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMBannerPool.m; sourceTree = "<group>"; };
+		EABE46351BB4FBCE00901B88 /* DYMBannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMBannerVC.h; sourceTree = "<group>"; };
+		EABE46361BB4FBCE00901B88 /* DYMBannerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMBannerVC.m; sourceTree = "<group>"; };
+		EABE46371BB4FBCE00901B88 /* DYMRollingBannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMRollingBannerVC.h; sourceTree = "<group>"; };
+		EABE46381BB4FBCE00901B88 /* DYMRollingBannerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMRollingBannerVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,14 +114,9 @@
 		EA1C12331BB436CE0085CC2F /* DYMRollingBanner */ = {
 			isa = PBXGroup;
 			children = (
+				EABE46321BB4FBCE00901B88 /* DYMRollingBanner */,
 				EA1C12381BB436CE0085CC2F /* AppDelegate.h */,
 				EA1C12391BB436CE0085CC2F /* AppDelegate.m */,
-				EA1C123B1BB436CE0085CC2F /* DYMRollingBannerVC.h */,
-				EA1C123C1BB436CE0085CC2F /* DYMRollingBannerVC.m */,
-				EA1C125A1BB439CA0085CC2F /* DYMBannerVC.h */,
-				EA1C125B1BB439CA0085CC2F /* DYMBannerVC.m */,
-				EABE462F1BB4D74E00901B88 /* DYMBannerPool.h */,
-				EABE46301BB4D74E00901B88 /* DYMBannerPool.m */,
 				EA1C123E1BB436CE0085CC2F /* Main.storyboard */,
 				EA1C12411BB436CE0085CC2F /* Images.xcassets */,
 				EA1C12431BB436CE0085CC2F /* LaunchScreen.xib */,
@@ -156,6 +151,19 @@
 				EA1C124F1BB436CE0085CC2F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EABE46321BB4FBCE00901B88 /* DYMRollingBanner */ = {
+			isa = PBXGroup;
+			children = (
+				EABE46331BB4FBCE00901B88 /* DYMBannerPool.h */,
+				EABE46341BB4FBCE00901B88 /* DYMBannerPool.m */,
+				EABE46351BB4FBCE00901B88 /* DYMBannerVC.h */,
+				EABE46361BB4FBCE00901B88 /* DYMBannerVC.m */,
+				EABE46371BB4FBCE00901B88 /* DYMRollingBannerVC.h */,
+				EABE46381BB4FBCE00901B88 /* DYMRollingBannerVC.m */,
+			);
+			path = DYMRollingBanner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,10 +301,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA1C123D1BB436CE0085CC2F /* DYMRollingBannerVC.m in Sources */,
-				EA1C125C1BB439CA0085CC2F /* DYMBannerVC.m in Sources */,
-				EABE46311BB4D74E00901B88 /* DYMBannerPool.m in Sources */,
+				EABE46391BB4FBCE00901B88 /* DYMBannerPool.m in Sources */,
+				EABE463A1BB4FBCE00901B88 /* DYMBannerVC.m in Sources */,
 				EA1C123A1BB436CE0085CC2F /* AppDelegate.m in Sources */,
+				EABE463B1BB4FBCE00901B88 /* DYMRollingBannerVC.m in Sources */,
 				EA1C12371BB436CE0085CC2F /* main.m in Sources */,
 				EA1C125F1BB440550085CC2F /* RootViewController.m in Sources */,
 			);
