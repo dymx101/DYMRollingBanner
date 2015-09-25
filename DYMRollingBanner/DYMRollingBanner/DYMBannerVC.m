@@ -10,9 +10,9 @@
 #import <Masonry/Masonry.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
-@interface DYMBannerVC () {
-    
-}
+@interface DYMBannerVC ()
+
+@property (nonatomic, strong)         UIImageView             *imageView;
 
 @end
 
@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.view.backgroundColor = [[UIColor orangeColor] colorWithAlphaComponent:0.9];
     
     _imageView = [UIImageView new];
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -28,49 +29,28 @@
     [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-    
-    self.imageURL = _imageURL;
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self loadImage];
 }
 
 -(void)setImageURL:(NSString *)imageURL {
-    _imageURL = imageURL;
     
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:_imageURL] placeholderImage:nil options:SDWebImageProgressiveDownload];
+    if (![_imageURL isEqualToString:imageURL]) {
+//        NSLog(@"----------\nBanner cancel loading: %@\nStart loading: %@\n", _imageURL, imageURL);
+        _imageURL = imageURL;
+        
+    } else {
+//        NSLog(@"------\nShowing the same image");
+    }
 }
 
+-(void)loadImage {
+    [_imageView sd_cancelCurrentImageLoad];
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:_imageURL]
+                  placeholderImage:_placeHolder options:SDWebImageProgressiveDownload];
+}
 
-#pragma mark - touches
-//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-//    
-//    NSLog(@"touchesBegan");
-//    
-//    if (_touchBlock) {
-//        _touchBlock(touches, event, kDYMTouchStageBegan);
-//    }
-//    
-//    [super touchesBegan:touches withEvent:event];
-//}
-//
-//-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-//    
-//    NSLog(@"touchesEnded");
-//    
-//    if (_touchBlock) {
-//        _touchBlock(touches, event, kDYMTouchStageEnded);
-//    }
-//    
-//    [super touchesEnded:touches withEvent:event];
-//}
-//
-//-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-//    
-//    NSLog(@"touchesCancelled");
-//    
-//    if (_touchBlock) {
-//        _touchBlock(touches, event, kDYMTouchStageCancelled);
-//    }
-//    
-//    [super touchesCancelled:touches withEvent:event];
-//}
 
 @end

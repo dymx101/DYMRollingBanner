@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+/// The view controller which rolling a group of banner images
 @interface DYMRollingBannerVC : UIPageViewController
-
+/// image urls for the rolling banner
 @property (nonatomic, copy)     NSArray             *rollingImageURLs;
+/// time interval between the rolling
 @property (nonatomic, assign)   NSTimeInterval      rollingInterval;
 
+/// start rolling
 -(void)startRolling;
+/// stop rolling
 -(void)stopRolling;
 
 @end

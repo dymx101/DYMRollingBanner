@@ -17,6 +17,7 @@
 		EA1C12511BB436CE0085CC2F /* DYMRollingBannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1C12501BB436CE0085CC2F /* DYMRollingBannerTests.m */; };
 		EA1C125C1BB439CA0085CC2F /* DYMBannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1C125B1BB439CA0085CC2F /* DYMBannerVC.m */; };
 		EA1C125F1BB440550085CC2F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1C125E1BB440550085CC2F /* RootViewController.m */; };
+		EABE46311BB4D74E00901B88 /* DYMBannerPool.m in Sources */ = {isa = PBXBuildFile; fileRef = EABE46301BB4D74E00901B88 /* DYMBannerPool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		EA1C125B1BB439CA0085CC2F /* DYMBannerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMBannerVC.m; sourceTree = "<group>"; };
 		EA1C125D1BB440550085CC2F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		EA1C125E1BB440550085CC2F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		EABE462F1BB4D74E00901B88 /* DYMBannerPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMBannerPool.h; sourceTree = "<group>"; };
+		EABE46301BB4D74E00901B88 /* DYMBannerPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMBannerPool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				EA1C123C1BB436CE0085CC2F /* DYMRollingBannerVC.m */,
 				EA1C125A1BB439CA0085CC2F /* DYMBannerVC.h */,
 				EA1C125B1BB439CA0085CC2F /* DYMBannerVC.m */,
+				EABE462F1BB4D74E00901B88 /* DYMBannerPool.h */,
+				EABE46301BB4D74E00901B88 /* DYMBannerPool.m */,
 				EA1C123E1BB436CE0085CC2F /* Main.storyboard */,
 				EA1C12411BB436CE0085CC2F /* Images.xcassets */,
 				EA1C12431BB436CE0085CC2F /* LaunchScreen.xib */,
@@ -290,6 +295,7 @@
 			files = (
 				EA1C123D1BB436CE0085CC2F /* DYMRollingBannerVC.m in Sources */,
 				EA1C125C1BB439CA0085CC2F /* DYMBannerVC.m in Sources */,
+				EABE46311BB4D74E00901B88 /* DYMBannerPool.m in Sources */,
 				EA1C123A1BB436CE0085CC2F /* AppDelegate.m in Sources */,
 				EA1C12371BB436CE0085CC2F /* main.m in Sources */,
 				EA1C125F1BB440550085CC2F /* RootViewController.m in Sources */,

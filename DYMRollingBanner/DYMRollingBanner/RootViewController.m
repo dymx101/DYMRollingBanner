@@ -28,11 +28,12 @@
         
         DYMRollingBannerVC *vc = (DYMRollingBannerVC *)segue.destinationViewController;
         vc.rollingInterval = 5;
-        vc.rollingImageURLs = @[@"http://www.drpsychmom.com/wp-content/uploads/2014/10/large_4278047231.jpg"
-                                , @"https://dyalikeblags.files.wordpress.com/2011/09/photo-of-wet-lonely-puppy.jpg"
-                                , @"https://c2.staticflickr.com/4/3345/5832660048_55f8b0935b.jpg"];
+        vc.rollingImageURLs = @[@"http://www.drpsychmom.com/wp-content/uploads/2014/10/large_4278047231.jpg" // bridge
+                                , @"https://c2.staticflickr.com/4/3345/5832660048_55f8b0935b.jpg"   // girl
+                                , @"http://epaper.syd.com.cn/sywb/res/1/20080108/42241199752656275.jpg" // another puppy
+                                ];
         
-//        [vc startRolling];
+        [vc startRolling];
     }
 }
 

@@ -8,21 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, EDYMTouchStage) {
-    kDYMTouchStageBegan
-    , kDYMTouchStageMoved
-    , kDYMTouchStageEnded
-    , kDYMTouchStageCancelled
-};
-
-typedef void(^DYMBannerTouchBlock)(NSSet *touches, UIEvent *event, EDYMTouchStage stage);
-
+/// Banner view controllers to show a banner image
 @interface DYMBannerVC : UIViewController
 
-@property (nonatomic, strong, readonly)         UIImageView             *imageView;
-
+/// placeHolder for the banner image
+@property (nonatomic, strong)                   UIImage                 *placeHolder;
+/// image url for the banner
 @property (nonatomic, copy)                     NSString                *imageURL;
-
-@property (nonatomic, copy)                     DYMBannerTouchBlock     touchBlock;
 
 @end
