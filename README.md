@@ -1,5 +1,3 @@
-![Logo](http://cdn.cocimg.com/bbs/attachment/Fid_19/19_88471_d255b06e7b21a91.png)
-
 # DYMRollingBanner
 `DYMRollingBanner` is a clean and easy-to-use banner rolling control for your `homepage` screen.    
 
@@ -57,3 +55,6 @@ If you have feature requests or bug reports, feel free to help out by sending pu
 ## Credits
 
 `DYMRollingBanner` is brought to you by [Yiming Dong](http://www.dongyiming.com). 
+
+
+![Logo](http://cdn.cocimg.com/bbs/attachment/Fid_19/19_88471_d255b06e7b21a91.png)
