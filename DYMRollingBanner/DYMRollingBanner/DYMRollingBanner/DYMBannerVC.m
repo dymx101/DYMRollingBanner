@@ -59,6 +59,7 @@
     ///
     _btnTap = [UIButton new];
     [_btnTap addTarget:self action:@selector(tapped:) forControlEvents:UIControlEventTouchUpInside];
+    
     [self.view addSubview:_btnTap];
     [_btnTap mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
@@ -73,29 +74,26 @@
 
 #pragma mark -
 -(void)tapped:(id)sender {
+
     if (_bannerTapHandler) {
         _bannerTapHandler(self.index);
     }
 }
 
--(void)setImageURL:(NSString *)imageURL {
-    
-    if (![_imageURL isEqualToString:imageURL]) {
-//        NSLog(@"----------\nBanner cancel loading: %@\nStart loading: %@\n", _imageURL, imageURL);
-        _imageURL = imageURL;
-        
-    } else {
-//        NSLog(@"------\nShowing the same image");
-    }
-}
 
 -(void)loadImage {
-    [_imageView sd_cancelCurrentImageLoad];
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:_imageURL]
-                  placeholderImage:_placeHolder options:SDWebImageProgressiveDownload];
+    if ([_image isKindOfClass:[NSString class]]) {
+        
+        [_imageView sd_cancelCurrentImageLoad];
+        [_imageView sd_setImageWithURL:[NSURL URLWithString:_image]
+                      placeholderImage:_placeHolder options:SDWebImageProgressiveDownload];
+        
+    } else if ([_image isKindOfClass:[UIImage class]]) {
+        
+        _imageView.image = _image;
+        
+    }
 }
-
-
 
 
 @end

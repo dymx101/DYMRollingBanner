@@ -67,7 +67,7 @@
     
     ///
     _pageControl = [[UIPageControl alloc] init];
-    _pageControl.numberOfPages = _rollingImageURLs.count;
+    _pageControl.numberOfPages = _rollingImages.count;
     _pageControl.backgroundColor = [UIColor colorWithWhite:1 alpha:0.1];
     
     [self.view addSubview:_pageControl];
@@ -78,9 +78,10 @@
     /// init first view controller and show it
     DYMBannerVC *vc = [_bannerPool dequeueBannerExclude:self.viewControllers];
     vc.bannerTapHandler = [self tapHandlerForVC];
-    vc.imageURL = _rollingImageURLs.firstObject;
+    vc.image = _rollingImages.firstObject;
     
     [self setViewControllers:@[vc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    
 }
 
 
@@ -90,9 +91,7 @@
 -(void)startRolling {
     [_timer invalidate];
     _timer = [NSTimer scheduledTimerWithTimeInterval:self.rollingInterval target:self selector:@selector(doRolling) userInfo:nil repeats:YES];
-    
-    // I haven't added the timer to the runloop common modes since I need the timer to be paused when scrolling...
-//    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 }
 
 -(void)stopRolling {
@@ -101,12 +100,10 @@
 }
 
 -(void)pauseRolling {
-//    NSLog(@"pauseRolling");
     [_timer setFireDate:[NSDate distantFuture]];
 }
 
 -(void)resumeRolling {
-//    NSLog(@"resumeRolling");
     [_timer setFireDate:[NSDate dateWithTimeInterval:self.rollingInterval sinceDate:[NSDate date]]];
 }
 
@@ -116,7 +113,7 @@
     if (nextVC == nil) {
         nextVC = [_bannerPool dequeueBannerExclude:self.viewControllers];
         nextVC.bannerTapHandler = [self tapHandlerForVC];
-        nextVC.imageURL = _rollingImageURLs.firstObject;
+        nextVC.image = _rollingImages.firstObject;
     }
     
     __weak typeof(self) weakSelf = self;
@@ -148,8 +145,6 @@
 #pragma mark - helpers
 -(NSInteger)cycleChangeIndex:(NSInteger)index delta:(NSInteger)delta maxIndex:(NSInteger)maxIndex {
     
-//    NSLog(@"input index:%@, delta:%@, maxIndex:%@", @(index), @(delta), @(maxIndex));
-    
     index += delta;
     
     if (index < 0) {
@@ -158,8 +153,6 @@
         index = 0;
     }
     
-//    NSLog(@"output index:%@", @(index));
-    
     return index;
 }
 
@@ -167,7 +160,6 @@
 -(DYMBannerVC *)vcNextTo:(UIViewController *)vc beforeOrAfter:(BOOL)beforeOrAfter {
     
     if (![vc isKindOfClass:[DYMBannerVC class]]) {
-        //        NSLog(@"vc:%@ invalid, return nil", vc);
         return nil;
     }
     
@@ -175,18 +167,17 @@
     nextVC.bannerTapHandler = [self tapHandlerForVC];
 
     
-    NSString *imageURL = ((DYMBannerVC *)vc).imageURL;
-    NSInteger index = [_rollingImageURLs indexOfObject:imageURL];
+    NSString *imageURL = ((DYMBannerVC *)vc).image;
+    NSInteger index = [_rollingImages indexOfObject:imageURL];
     if (index != NSNotFound) {
-        NSInteger nextIndex = [self cycleChangeIndex:index delta:(beforeOrAfter ? -1 : 1) maxIndex:_rollingImageURLs.count - 1];
-        //        NSLog(@"current index:%@, next index:%@ \n", @(index), @(nextIndex));
-        nextVC.imageURL = _rollingImageURLs[nextIndex];
+        NSInteger nextIndex = [self cycleChangeIndex:index delta:(beforeOrAfter ? -1 : 1) maxIndex:_rollingImages.count - 1];
+        
+        nextVC.image = _rollingImages[nextIndex];
         nextVC.index = nextIndex;
         
         return nextVC;
     }
     
-    //    NSLog(@"imageURL:%@ invalid, return nil", imageURL);
     return nil;
 }
 
@@ -202,19 +193,32 @@
 
 #pragma mark -  UIPageViewControllerDataSource
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-//    NSLog(@"viewControllerBeforeViewController");
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
+      viewControllerBeforeViewController:(UIViewController *)viewController {
+
     return [self vcNextTo:viewController beforeOrAfter:YES];
 }
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
-//    NSLog(@"viewControllerAfterViewController");
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
+       viewControllerAfterViewController:(UIViewController *)viewController {
+
     return [self vcNextTo:viewController beforeOrAfter:NO];
 }
 
 
 #pragma mark - UIPageViewControllerDelegate
-- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers {
+//    NSLog(@"%@", NSStringFromSelector(_cmd));
+    
+    [self pauseRolling];
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished
+   previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
+//    NSLog(@"%@", NSStringFromSelector(_cmd));
+    
+    [self resumeRolling];
+    
     DYMBannerVC *vc = pageViewController.viewControllers.firstObject;
     if ([vc isKindOfClass:[DYMBannerVC class]]) {
         _pageControl.currentPage = vc.index;
