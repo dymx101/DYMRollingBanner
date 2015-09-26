@@ -28,7 +28,7 @@
 #import <UIKit/UIKit.h>
 #import "DYMBannerVC.h"
 
-/// The view controller which rolling a group of banner images
+/// The view controller which rolls a group of banner images
 @interface DYMRollingBannerVC : UIPageViewController
 /// images for the rolling banner, can be a remote URL or UIImage
 @property (nonatomic, copy)     NSArray                 *rollingImages;

@@ -32,7 +32,7 @@
 typedef void(^DYMBannderTapHandler)(NSInteger whichIndex);
 
 
-/// Banner view controllers to show a banner image
+/// Banner view controller to show a banner image
 @interface DYMBannerVC : UIViewController
 
 /// placeHolder for the banner image
