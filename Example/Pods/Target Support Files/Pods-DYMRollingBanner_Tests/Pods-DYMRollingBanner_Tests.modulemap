@@ -1,0 +1,6 @@
+framework module Pods_DYMRollingBanner_Tests {
+  umbrella header "Pods-DYMRollingBanner_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

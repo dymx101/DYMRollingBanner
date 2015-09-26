@@ -1,0 +1,19 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+
+platform :ios, '7.0'
+
+pod 'Masonry', '~> 0.6.2'
+pod 'SDWebImage', '~> 3.7.3'
+
+
+target 'DYMRollingBanner_Example', :exclusive => true do
+  pod "DYMRollingBanner", :path => "../"
+end
+
+target 'DYMRollingBanner_Tests', :exclusive => true do
+  pod "DYMRollingBanner", :path => "../"
+
+  
+end

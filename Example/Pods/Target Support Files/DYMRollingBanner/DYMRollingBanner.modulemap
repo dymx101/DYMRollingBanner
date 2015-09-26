@@ -1,0 +1,6 @@
+framework module DYMRollingBanner {
+  umbrella header "DYMRollingBanner-umbrella.h"
+
+  export *
+  module * { export * }
+}
