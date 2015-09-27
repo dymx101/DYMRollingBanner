@@ -19,7 +19,7 @@ Why do I write this ? Well...Actually, I've been searching for a scrolling banne
 
 ### From CocoaPods
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like `SVProgressHUD` in your projects. Simply add the following line to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like `DYMRollingBanner` in your projects. Simply add the following line to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
 
 ```ruby
 pod 'DYMRollingBanner', '~> 2.1.2'
@@ -31,7 +31,7 @@ Unlike many other banner scrolling controls, `DYMRollingBanner` doesn't use `UIS
     
 To integrate `DYMRollingBanner`, firstly, you need to copy the assciated files into your project, and import `DYMRollingBannerVC.h` file:    
 ```objective-c
-#import "DYMRollingBannerVC.h"
+#import <DYMRollingBannerVC/DYMRollingBannerVC.h>
 ```
 
 Secondly, Create a `DYMRollingBannerVC` object.       
