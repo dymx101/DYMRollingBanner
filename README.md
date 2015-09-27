@@ -15,15 +15,24 @@ Why do I write this ? Well...Actually, I've been searching for a scrolling banne
 * 100% compatible with `AutoLayout`.  
 * Writen with clean code and very easy to use. 
 
-## Installation
+## Installation 
 
-### From CocoaPods
+### (from CocoaPods)
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like `DYMRollingBanner` in your projects. Simply add the following line to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
 
 ```ruby
 pod 'DYMRollingBanner', '~> 2.1.2'
 ```
+### (direct installation)
+Just copy these source files into you project:
+* `DYMRollingBannerVC.h`    
+* `DYMRollingBannerVC.m`    
+* `DYMBannerVC.h`    
+* `DYMBannerVC.m`    
+* `DYMBannerPool.h`    
+* `DYMBannerPool.m`   
+
  
 ## Usage     
 
@@ -55,19 +64,19 @@ Then, add the `DYMRollingBannerVC` object as the child view controller of the ho
 
 Finally, feed it with you image URLs or `UIImage` object:       
 ```objective-c
-vc.rollingInterval = 5;
-vc.rollingImages = @[@"http://www.drpsychmom.com/wp-content/uploads/2014/10/large_4278047231.jpg"
+_rollingBannerVC.rollingInterval = 5;
+_rollingBannerVC.rollingImages = @[@"http://www.drpsychmom.com/wp-content/uploads/2014/10/large_4278047231.jpg"
                                 , @"https://c2.staticflickr.com/4/3345/5832660048_55f8b0935b.jpg"
                                 , @"http://epaper.syd.com.cn/sywb/res/1/20080108/42241199752656275.jpg"
                                 , [UIImage imageNamed:@"001"]    // Local Image
                                 , [UIImage imageNamed:@"002"]    // Locak Image
                                 ];
         
-  [vc addBannerTapHandler:^(NSInteger whichIndex) {
+  [_rollingBannerVC addBannerTapHandler:^(NSInteger whichIndex) {
         NSLog(@"banner tapped, index = %@", @(whichIndex));
   }];
         
-  [vc startRolling];
+  [_rollingBannerVC startRolling];
 ```
 And you are good to go!  
 
