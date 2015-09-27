@@ -40,7 +40,7 @@ Unlike many other banner scrolling controls, `DYMRollingBanner` doesn't use `UIS
     
 To integrate `DYMRollingBanner`, firstly, you need to copy the assciated files into your project, and import `DYMRollingBannerVC.h` file:    
 ```objective-c
-#import <DYMRollingBannerVC/DYMRollingBannerVC.h>
+#import <DYMRollingBanner/DYMRollingBannerVC.h>
 ```
 
 Secondly, Create a `DYMRollingBannerVC` object.       
@@ -90,7 +90,7 @@ This code is using `Masonry` for Autolayout, and `SDWebImage` for image download
 
 ## Contributing to this project
 
-If you have feature requests or bug reports, feel free to help out by sending pull requests.
+If you have feature requests or bug reports, feel free to help out by sending pull requests, or [contact me](dymx101@hotmail.com).
 
 ## Credits
 
