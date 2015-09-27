@@ -3,21 +3,29 @@
 
 ![DEMO Gif](http://cdn.cocimg.com/bbs/attachment/Fid_19/19_88471_6119c1d8323275c.gif)
 
-### Why
+## Why
 Why do I write this ? Well...Actually, I've been searching for a scrolling banner view at github for a while, but no luck since some of the code I found are too old to support `Autolayout`, others don't scrolls infinitely... none of them satisfied me. Then,  I decided to do it myself, to write something cool...and finally,  here you go!
 
-### Features  
-
-* Writen with clean code and very easy to use.    
-* Supports both local and remote images.    
-* Paused on dragging and resumes on releasing.    
-* Implements a memory cache which makes it lightning fast and less memory consuming.     
+## Features  
 * Infinite scrolling, which mean it  return to show the first banner when ended with the last one.     
+* Supports both local and remote images.    
+* Paused on dragging and resumes on releasing when it's auto rolling.    
+* Implemented a memory cache which makes it lightning fast and less memory consuming.     
 * Block based event handling.    
-* 100% compatible with `AutoLayout`.      
+* 100% compatible with `AutoLayout`.  
+* Writen with clean code and very easy to use. 
 
+## Installation
+
+### From CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like `SVProgressHUD` in your projects. Simply add the following line to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
+
+```ruby
+pod 'DYMRollingBanner', '~> 2.1.2'
+```
  
-### Usage     
+## Usage     
 
 Unlike many other banner scrolling controls, `DYMRollingBanner` doesn't use `UIScrollingView` or its subclasses `UITableview` or `UICollectionView`, instead it take full advantage of `UIPageViewController` which is natually an `INFINITE` controller.    
     
@@ -26,12 +34,27 @@ To integrate `DYMRollingBanner`, firstly, you need to copy the assciated files i
 #import "DYMRollingBannerVC.h"
 ```
 
-Secondly, Create a `DYMRollingBannerVC` object, and install it as a child view controller.    
+Secondly, Create a `DYMRollingBannerVC` object.       
+```objective-c
+DYMRollingBannerVC      *_rollingBannerVC;
+
+_rollingBannerVC = [DYMRollingBannerVC new];
+```
+
+Then, add the `DYMRollingBannerVC` object as the child view controller of the host controller.    
+```objective-c
+[self addChildViewController:_rollingBannerVC];
+    [self.view addSubview:_rollingBannerVC.view];
+    [_rollingBannerVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.top.and.right.equalTo(self.view);
+        make.height.equalTo(@200);
+    }];
+    
+    [_rollingBannerVC didMoveToParentViewController:self];
+ ```
 
 Finally, feed it with you image URLs or `UIImage` object:       
 ```objective-c
-DYMRollingBannerVC *vc = [[DYMRollingBannerVC alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-
 vc.rollingInterval = 5;
 vc.rollingImages = @[@"http://www.drpsychmom.com/wp-content/uploads/2014/10/large_4278047231.jpg"
                                 , @"https://c2.staticflickr.com/4/3345/5832660048_55f8b0935b.jpg"
@@ -48,9 +71,13 @@ vc.rollingImages = @[@"http://www.drpsychmom.com/wp-content/uploads/2014/10/larg
 ```
 And you are good to go!  
 
+## Associated Classes   
+* `DYMRollingBannerVC` is the view controller which rolls a group of banner images.   
+* `DYMBannerVC` is the host view controller of each image, it's internally used by the `DYMRollingBannerVC`.    
+* `DYMBannerPool` is the memory pool from which you dequeue a banner from, it's internally used by the `DYMRollingBannerVC`.    
 
-### Notice    
-This code is using `Masonry` for Autolayout, and `SDWebImage` for image downloading, so please remember to add these two libraries to your project when integrating `DYMRollingBanner`.    
+## Notice    
+This code is using `Masonry` for Autolayout, and `SDWebImage` for image downloading, so if you install `DYMRollingBanner` using cocopods, these two libraries will also be installed.  
 
 ## Contributing to this project
 
