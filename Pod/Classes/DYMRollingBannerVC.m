@@ -54,6 +54,45 @@
     return _rollingInterval;
 }
 
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    
+    if (self) {
+        [self _doInit];
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self _doInit];
+    }
+    return self;
+}
+
+-(void)_doInit {
+    _bannerPool = [[DYMBannerPool alloc] initWithSize:10];
+    _pageControl = [[UIPageControl alloc] init];
+}
+
+-(void)setRollingImages:(NSArray *)rollingImages {
+    
+    _rollingImages = rollingImages;
+    
+    /// set page count
+    _pageControl.numberOfPages = _rollingImages.count;
+    
+    /// init first view controller and show it
+    DYMBannerVC *vc = [_bannerPool dequeueBannerExclude:self.viewControllers];
+    vc.bannerTapHandler = [self tapHandlerForVC];
+    vc.image = _rollingImages.firstObject;
+    
+    [self setViewControllers:@[vc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+}
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
@@ -63,25 +102,10 @@
     
     self.view.backgroundColor = [UIColor colorWithWhite:0.98 alpha:1];
     
-    _bannerPool = [[DYMBannerPool alloc] initWithSize:10];
-    
-    ///
-    _pageControl = [[UIPageControl alloc] init];
-    _pageControl.numberOfPages = _rollingImages.count;
-    _pageControl.backgroundColor = [UIColor colorWithWhite:1 alpha:0.1];
-    
     [self.view addSubview:_pageControl];
     [_pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.bottom.and.right.equalTo(self.view);
     }];
-    
-    /// init first view controller and show it
-    DYMBannerVC *vc = [_bannerPool dequeueBannerExclude:self.viewControllers];
-    vc.bannerTapHandler = [self tapHandlerForVC];
-    vc.image = _rollingImages.firstObject;
-    
-    [self setViewControllers:@[vc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
-    
 }
 
 
