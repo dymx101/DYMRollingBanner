@@ -53,13 +53,15 @@ _rollingBannerVC = [DYMRollingBannerVC new];
 Then, add the `DYMRollingBannerVC` object as the child view controller of the host controller.    
 ```objective-c
 [self addChildViewController:_rollingBannerVC];
-    [self.view addSubview:_rollingBannerVC.view];
+[self.view addSubview:_rollingBannerVC.view];
+    
+    // The code below lays out the _rollingBannerVC's view using Masonry
     [_rollingBannerVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.top.and.right.equalTo(self.view);
         make.height.equalTo(@200);
     }];
     
-    [_rollingBannerVC didMoveToParentViewController:self];
+ [_rollingBannerVC didMoveToParentViewController:self];
  ```
 
 Finally, feed it with you image URLs or `UIImage` object:       
