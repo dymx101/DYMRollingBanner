@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "DYMRollingBanner"
-  s.version          = "2.1.1"
+  s.version          = "2.1.2"
   s.summary          = "A buttery-smooth Infinite Banner Scrolling View Controller."
 
 # This description is used to generate tags and improve search results.
