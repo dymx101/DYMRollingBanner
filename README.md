@@ -90,7 +90,7 @@ This code is using `Masonry` for Autolayout, and `SDWebImage` for image download
 
 ## Contributing to this project
 
-If you have feature requests or bug reports, feel free to help out by sending pull requests, or [contact me](dymx101@hotmail.com).
+If you have feature requests or bug reports, feel free to help out by sending pull requests, or contact dymx101@hotmail.com.
 
 ## Credits
 
