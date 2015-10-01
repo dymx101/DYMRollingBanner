@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Masonry.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-DYMRollingBanner_Example.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,27 +37,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0C789A093D0AAF800E27477629C57B68</key>
+		<key>28F5F5B4D39D6252F6B83D6048BB265A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>123655861C6284526144A9D8023993D0</key>
+		<key>39489885A99D1BBFE1D31F00F76484F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>469B253855182318804004737DC4C006</key>
+		<key>5F4F4AD97D472174DE433BD9DC4EC6F0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6368D45D5391FF60BF9986353251B6D1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>890DFE80C67CE7A34A32915C74DA0CB8</key>
+		<key>9381CA6157F4BA7205CEA26CEF1363AA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B0495BCE2BFB93E1AA326937518E2BEA</key>
+		<key>D47E896DFA4012EE53F46F30647FE659</key>
 		<dict>
 			<key>primary</key>
 			<true/>

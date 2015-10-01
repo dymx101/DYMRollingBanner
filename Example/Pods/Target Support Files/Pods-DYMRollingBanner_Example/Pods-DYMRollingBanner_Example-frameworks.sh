@@ -52,12 +52,10 @@ code_sign_if_enabled() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework 'Pods-DYMRollingBanner_Example/Masonry.framework'
   install_framework 'Pods-DYMRollingBanner_Example/SDWebImage.framework'
   install_framework 'Pods-DYMRollingBanner_Example/DYMRollingBanner.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework 'Pods-DYMRollingBanner_Example/Masonry.framework'
   install_framework 'Pods-DYMRollingBanner_Example/SDWebImage.framework'
   install_framework 'Pods-DYMRollingBanner_Example/DYMRollingBanner.framework'
 fi

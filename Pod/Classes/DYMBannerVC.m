@@ -27,7 +27,6 @@
 
 
 #import "DYMBannerVC.h"
-#import <Masonry/Masonry.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface DYMBannerVC () {
@@ -52,18 +51,18 @@
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
     [self.view addSubview:_imageView];
     
-    [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
-    
-    ///
     _btnTap = [UIButton new];
     [_btnTap addTarget:self action:@selector(tapped:) forControlEvents:UIControlEventTouchUpInside];
-    
     [self.view addSubview:_btnTap];
-    [_btnTap mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
+    
+    // Layout
+    _imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    _btnTap.translatesAutoresizingMaskIntoConstraints = NO;
+    id viewsDic = NSDictionaryOfVariableBindings(_imageView, _btnTap);
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_imageView]|" options:0 metrics:nil views:viewsDic]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_imageView]|" options:0 metrics:nil views:viewsDic]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_btnTap]|" options:0 metrics:nil views:viewsDic]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_btnTap]|" options:0 metrics:nil views:viewsDic]];
 }
 
 -(void)viewWillAppear:(BOOL)animated {

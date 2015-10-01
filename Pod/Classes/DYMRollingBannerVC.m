@@ -28,7 +28,6 @@
 
 #import "DYMRollingBannerVC.h"
 #import "DYMBannerPool.h"
-#import <Masonry/Masonry.h>
 
 @interface DYMRollingBannerVC () <UIPageViewControllerDataSource, UIPageViewControllerDelegate> {
     
@@ -103,9 +102,13 @@
     self.view.backgroundColor = [UIColor colorWithWhite:0.98 alpha:1];
     
     [self.view addSubview:_pageControl];
-    [_pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.bottom.and.right.equalTo(self.view);
-    }];
+    
+    /// Layout PageConstrol
+    _pageControl.translatesAutoresizingMaskIntoConstraints = NO;
+    id viewsDic = NSDictionaryOfVariableBindings(_pageControl);
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_pageControl]|" options:0 metrics:nil views:viewsDic]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_pageControl]|" options:0 metrics:nil views:viewsDic]];
+    
 }
 
 

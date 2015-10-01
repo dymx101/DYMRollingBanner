@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = "DYMRollingBanner"
-  s.version          = "2.1.2"
-  s.summary          = "A buttery-smooth Infinite Banner Scrolling View Controller."
+  s.version          = "2.1.3"
+  s.summary          = "A buttery-smooth Infinite Banner Scrolling View Controller, supports both local and remote images and is 100% compatible with AutoLayout."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -37,6 +37,6 @@ DYMRollingBanner is a clean and easy-to-use banner rolling control for your app'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Masonry', '~> 0.6.2'
+
   s.dependency 'SDWebImage', '~> 3.7.3'
 end
