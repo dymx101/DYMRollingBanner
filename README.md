@@ -22,7 +22,7 @@ Why do I write this ? Well...Actually, I've been searching for a scrolling banne
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like `DYMRollingBanner` in your projects. Simply add the following line to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
 
 ```ruby
-pod 'DYMRollingBanner', '~> 2.1.2'
+pod 'DYMRollingBanner', '~> 2.1.3'
 ```
 ### (direct installation)
 Just copy these source files into you project:
@@ -88,7 +88,7 @@ And you are good to go!
 * `DYMBannerPool` is the memory pool from which you dequeue a banner from, it's internally used by the `DYMRollingBannerVC`.    
 
 ## Notice    
-This code is using `Masonry` for Autolayout, and `SDWebImage` for image downloading, so if you install `DYMRollingBanner` using cocopods, these two libraries will also be installed.  
+This code uses `SDWebImage` for image downloading, so if you install `DYMRollingBanner` using cocopods, this library will be installed too, but if you prefer to manually copy the source files into your project, make sure also to include `SDWebImage`. 
 
 ## Contributing to this project
 
