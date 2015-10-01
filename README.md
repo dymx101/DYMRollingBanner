@@ -4,7 +4,7 @@
 ![DEMO Gif](http://cdn.cocimg.com/bbs/attachment/Fid_19/19_88471_6119c1d8323275c.gif)
 
 ## Why
-Why do I write this ? Well...Actually, I've been searching for a scrolling banner view at github for a while, but no luck since some of the code I found are too old to support `Autolayout`, others don't scrolls infinitely... none of them satisfied me. Then,  I decided to do it myself, to write something cool...and finally,  here you go!
+Why do I write this ? Well...actually, I've been searching for a scrolling banner view at github for a while, but no luck since some of the code I found are too old to support `Autolayout`, others don't scrolls infinitely... none of them satisfied me. Then,  I decided to do it myself, to write a good one...and here you go...
 
 ## Features  
 * Infinite scrolling, which mean it  return to show the first banner when ended with the last one.     
@@ -88,7 +88,7 @@ And you are good to go!
 * `DYMBannerPool` is the memory pool from which you dequeue a banner from, it's internally used by the `DYMRollingBannerVC`.    
 
 ## Notice    
-This code uses `SDWebImage` for image downloading, so if you install `DYMRollingBanner` using cocopods, this library will be installed too, but if you prefer to manually copy the source files into your project, make sure also to include `SDWebImage`. 
+`DYMRollingBanner` uses `SDWebImage` for image downloading, so if you install `DYMRollingBanner` using cocopods, this library will be installed too, but if you prefer to manually copy the source files into your project, make sure also to include `SDWebImage`. 
 
 ## Contributing to this project
 
