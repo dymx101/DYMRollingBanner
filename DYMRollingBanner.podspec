@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "DYMRollingBanner"
-  s.version          = "2.1.3"
+  s.version          = "2.1.4"
   s.summary          = "A buttery-smooth Infinite Banner Scrolling View Controller, supports both local and remote images and is 100% compatible with AutoLayout."
 
 # This description is used to generate tags and improve search results.

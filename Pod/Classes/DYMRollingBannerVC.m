@@ -235,14 +235,14 @@
 
 #pragma mark - UIPageViewControllerDelegate
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers {
-//    NSLog(@"%@", NSStringFromSelector(_cmd));
+//      NSLog(@"%@", NSStringFromSelector(_cmd));
     
     [self pauseRolling];
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished
    previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
-//    NSLog(@"%@", NSStringFromSelector(_cmd));
+//      NSLog(@"%@", NSStringFromSelector(_cmd));
     
     [self resumeRolling];
     
