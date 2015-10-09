@@ -22,7 +22,7 @@ Why do I write this ? Well...actually, I've been searching for a scrolling banne
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like `DYMRollingBanner` in your projects. Simply add the following line to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
 
 ```ruby
-pod 'DYMRollingBanner', '~> 2.1.3'
+pod 'DYMRollingBanner', '~> 2.1.4'
 ```
 ### (direct installation)
 Just copy these source files into you project:
