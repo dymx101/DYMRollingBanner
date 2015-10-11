@@ -96,7 +96,8 @@ If you have feature requests or bug reports, feel free to help out by sending pu
 
 ## Credits
 
-`DYMRollingBanner` is brought to you by [Yiming Dong](http://www.dongyiming.com). 
+`DYMRollingBanner` is brought to you by [Yiming Dong](http://www.dongyiming.com).     
+Follow me or ask questions or just say Hi! at Twitter : <a href="https://twitter.com/dymx101" target="_blank">@dymx101</a>    
 
 
 ![Logo](http://cdn.cocimg.com/bbs/attachment/Fid_19/19_88471_d255b06e7b21a91.png)
