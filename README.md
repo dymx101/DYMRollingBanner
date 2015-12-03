@@ -13,7 +13,9 @@ Why do I write this ? Well...actually, I've been searching for a scrolling banne
 * Implemented a memory cache which makes it lightning fast and less memory consuming.     
 * Block based event handling.    
 * 100% compatible with `AutoLayout`.  
-* Writen with clean code and very easy to use. 
+* Writen with clean code and very easy to use.     
+* Placeholder image is customizable.    
+* Remote image fetcher is cusomizable.    
 
 ## Installation 
 
@@ -100,9 +102,6 @@ And you are good to go!
 * `DYMRollingBannerVC` is the view controller which rolls a group of banner images.   
 * `DYMBannerVC` is the host view controller of each image, it's internally used by the `DYMRollingBannerVC`.    
 * `DYMBannerPool` is the memory pool from which you dequeue a banner from, it's internally used by the `DYMRollingBannerVC`.    
-
-## Notice    
-`DYMRollingBanner` uses `SDWebImage` for image downloading, so if you install `DYMRollingBanner` using cocopods, this library will be installed too, but if you prefer to manually copy the source files into your project, make sure also to include `SDWebImage`. 
 
 ## Contributing to this project
 
