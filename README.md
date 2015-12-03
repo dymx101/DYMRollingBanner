@@ -22,7 +22,7 @@ Why do I write this ? Well...actually, I've been searching for a scrolling banne
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like `DYMRollingBanner` in your projects. Simply add the following line to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
 
 ```ruby
-pod 'DYMRollingBanner', '~> 2.1.4'
+pod 'DYMRollingBanner', '~> 2.1.5'
 ```
 ### (direct installation)
 Just copy these source files into you project:
@@ -66,19 +66,33 @@ Then, add the `DYMRollingBannerVC` object as the child view controller of the ho
 
 Finally, feed it with you image URLs or `UIImage` object:       
 ```objective-c
-_rollingBannerVC.rollingInterval = 5;
-_rollingBannerVC.rollingImages = @[@"http://www.drpsychmom.com/wp-content/uploads/2014/10/large_4278047231.jpg"
-                                , @"https://c2.staticflickr.com/4/3345/5832660048_55f8b0935b.jpg"
-                                , @"http://epaper.syd.com.cn/sywb/res/1/20080108/42241199752656275.jpg"
-                                , [UIImage imageNamed:@"001"]    // Local Image
-                                , [UIImage imageNamed:@"002"]    // Locak Image
-                                ];
+// 1. Set the inteval for rolling (optional, the default value is 1 sec)
+        _rollingBannerVC.rollingInterval = 5;
         
-  [_rollingBannerVC addBannerTapHandler:^(NSInteger whichIndex) {
-        NSLog(@"banner tapped, index = %@", @(whichIndex));
-  }];
+        // 2. set the placeholder image (optional, the default place holder is nil)
+        _rollingBannerVC.placeHolderImage = [UIImage imageNamed:@"default"];
         
-  [_rollingBannerVC startRolling];
+        // 3. define the way how you load the image from a remote url
+        [_rollingBannerVC setRemoteImageLoadingBlock:^(UIImageView *imageView, NSString *imageUrlStr, UIImage *placeHolderImage) {
+            [imageView sd_cancelCurrentImageLoad];
+            [imageView sd_setImageWithURL:[NSURL URLWithString:imageUrlStr] placeholderImage:placeHolderImage options:SDWebImageProgressiveDownload];
+        }];
+        
+        // 4. setup the rolling images
+        _rollingBannerVC.rollingImages = @[@"http://easyread.ph.126.net/G8GtEi-zmPQzvS5w7ScxmQ==/7806606224489671909.jpg"
+                             , @"https://c2.staticflickr.com/4/3345/5832660048_55f8b0935b.jpg"
+                             , @"http://epaper.syd.com.cn/sywb/res/1/20080108/42241199752656275.jpg"
+                             , [UIImage imageNamed:@"001"]
+                             , [UIImage imageNamed:@"002"]
+                             ];
+        
+        // 5. add a handler when a tap event occours (optional, default do noting)
+        [_rollingBannerVC addBannerTapHandler:^(NSInteger whichIndex) {
+            NSLog(@"banner tapped, index = %@", @(whichIndex));
+        }];
+        
+        // 6. start auto rolling (optional, default does not auto roll)
+        [_rollingBannerVC startRolling];
 ```
 And you are good to go!  
 
