@@ -31,6 +31,8 @@
 
 typedef void(^DYMBannderTapHandler)(NSInteger whichIndex);
 
+typedef void(^DYMBannerRemoteImageLoadingBlock)(UIImageView *imageView, NSString *imageUrlStr, UIImage *placeHolderImage);
+
 
 /// Banner view controller to show a banner image
 @interface DYMBannerVC : UIViewController
@@ -44,5 +46,8 @@ typedef void(^DYMBannderTapHandler)(NSInteger whichIndex);
 
 /// handler block for banner tapping
 @property (nonatomic, copy)                     DYMBannderTapHandler    bannerTapHandler;
+
+/// image loading block
+@property (nonatomic, copy)                     DYMBannerRemoteImageLoadingBlock    remoteImageLoadingBlock;
 
 @end

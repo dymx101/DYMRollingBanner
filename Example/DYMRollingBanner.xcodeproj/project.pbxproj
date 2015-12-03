@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06267392BB0D0F3A47D7E7DC /* Pods_DYMRollingBanner_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF3B2CBBC2B689A1CC99C39 /* Pods_DYMRollingBanner_Tests.framework */; };
-		26355AC4FEEDF6BB42ED2D89 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F01D9162255AAF581273E754 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		369316C0199672FD4C0C7271 /* Pods_DYMRollingBanner_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B40F277F2D97432A7DE51D /* Pods_DYMRollingBanner_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -23,8 +22,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		DE2E4230BC0371C51FCE1B5C /* Pods_DYMRollingBanner_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F2D70425E85CB55C7E7A32 /* Pods_DYMRollingBanner_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		EAB680E91C0F2A6400526E40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB680E81C0F2A6400526E40 /* LaunchScreen.storyboard */; };
+		C6F605AD2C3406807B4F3C98 /* Pods_DYMRollingBanner_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34D0DB3EADC41DF06794BE9 /* Pods_DYMRollingBanner_Tests.framework */; };
+		EAAC3A081C0FD34A00AEFC8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAC3A071C0FD34A00AEFC8D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		36FD2FE3D45E74AF99EE2CAC /* Pods-DYMRollingBanner_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYMRollingBanner_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYMRollingBanner_Tests/Pods-DYMRollingBanner_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		3BA81722F8DD237F66F11C75 /* Pods-DYMRollingBanner_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYMRollingBanner_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYMRollingBanner_Tests/Pods-DYMRollingBanner_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2C11FA13E5E5072EA687ED5B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3B5DAEB00FA7827F804CF9CC /* Pods-DYMRollingBanner_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYMRollingBanner_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYMRollingBanner_Tests/Pods-DYMRollingBanner_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		5680FA70BFCFED0C9A5434A8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* DYMRollingBanner_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYMRollingBanner_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,19 +59,14 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6B0B2D62DE017CBCA7B9DF76 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		6FF3B2CBBC2B689A1CC99C39 /* Pods_DYMRollingBanner_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYMRollingBanner_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F910D72276106779C6AD225 /* DYMRollingBanner.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DYMRollingBanner.podspec; path = ../DYMRollingBanner.podspec; sourceTree = "<group>"; };
+		669198620A4683D080255E6B /* Pods-DYMRollingBanner_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYMRollingBanner_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYMRollingBanner_Example/Pods-DYMRollingBanner_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		68462499E836ED56F2324899 /* Pods-DYMRollingBanner_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYMRollingBanner_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYMRollingBanner_Example/Pods-DYMRollingBanner_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		A6F7E72F4FA1535D4415DC95 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		CB21D4F186DD0A42529D0E06 /* Pods-DYMRollingBanner_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYMRollingBanner_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYMRollingBanner_Example/Pods-DYMRollingBanner_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D10A4C1935F3ED4599FB49BC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		EAB680E81C0F2A6400526E40 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EAB680EA1C0F2EA500526E40 /* DYMRollingBanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DYMRollingBanner.framework; path = "Pods/../build/Debug-iphoneos/DYMRollingBanner.framework"; sourceTree = "<group>"; };
-		EAF1C99FFAEC0126B5E0E892 /* Pods-DYMRollingBanner_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYMRollingBanner_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYMRollingBanner_Example/Pods-DYMRollingBanner_Example.release.xcconfig"; sourceTree = "<group>"; };
-		EE9C37760E6565B1A43230BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		F01D9162255AAF581273E754 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3F2D70425E85CB55C7E7A32 /* Pods_DYMRollingBanner_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYMRollingBanner_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9083D24F0FF84D0255285AF /* Pods-DYMRollingBanner_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYMRollingBanner_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYMRollingBanner_Tests/Pods-DYMRollingBanner_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B34D0DB3EADC41DF06794BE9 /* Pods_DYMRollingBanner_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYMRollingBanner_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C390526E4A6A376F51ACA32C /* DYMRollingBanner.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DYMRollingBanner.podspec; path = ../DYMRollingBanner.podspec; sourceTree = "<group>"; };
+		C9B40F277F2D97432A7DE51D /* Pods_DYMRollingBanner_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYMRollingBanner_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAAC3A071C0FD34A00AEFC8D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				DE2E4230BC0371C51FCE1B5C /* Pods_DYMRollingBanner_Example.framework in Frameworks */,
-				26355AC4FEEDF6BB42ED2D89 /* Pods.framework in Frameworks */,
+				369316C0199672FD4C0C7271 /* Pods_DYMRollingBanner_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				06267392BB0D0F3A47D7E7DC /* Pods_DYMRollingBanner_Tests.framework in Frameworks */,
+				C6F605AD2C3406807B4F3C98 /* Pods_DYMRollingBanner_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +103,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				72C261620EECCC4062BAA0FF /* Pods */,
+				A12F812FFBBE16554F5A9F9C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,14 +119,12 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EAB680EA1C0F2EA500526E40 /* DYMRollingBanner.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				F3F2D70425E85CB55C7E7A32 /* Pods_DYMRollingBanner_Example.framework */,
-				6FF3B2CBBC2B689A1CC99C39 /* Pods_DYMRollingBanner_Tests.framework */,
-				F01D9162255AAF581273E754 /* Pods.framework */,
+				C9B40F277F2D97432A7DE51D /* Pods_DYMRollingBanner_Example.framework */,
+				B34D0DB3EADC41DF06794BE9 /* Pods_DYMRollingBanner_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,7 +135,7 @@
 				6003F59C195388D20070C39A /* DYMAppDelegate.h */,
 				6003F59D195388D20070C39A /* DYMAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				EAB680E81C0F2A6400526E40 /* LaunchScreen.storyboard */,
+				EAAC3A071C0FD34A00AEFC8D /* LaunchScreen.storyboard */,
 				6003F5A5195388D20070C39A /* DYMViewController.h */,
 				6003F5A6195388D20070C39A /* DYMViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -186,22 +178,20 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				7F910D72276106779C6AD225 /* DYMRollingBanner.podspec */,
-				6B0B2D62DE017CBCA7B9DF76 /* README.md */,
-				EE9C37760E6565B1A43230BC /* LICENSE */,
+				C390526E4A6A376F51ACA32C /* DYMRollingBanner.podspec */,
+				2C11FA13E5E5072EA687ED5B /* README.md */,
+				5680FA70BFCFED0C9A5434A8 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		72C261620EECCC4062BAA0FF /* Pods */ = {
+		A12F812FFBBE16554F5A9F9C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CB21D4F186DD0A42529D0E06 /* Pods-DYMRollingBanner_Example.debug.xcconfig */,
-				EAF1C99FFAEC0126B5E0E892 /* Pods-DYMRollingBanner_Example.release.xcconfig */,
-				36FD2FE3D45E74AF99EE2CAC /* Pods-DYMRollingBanner_Tests.debug.xcconfig */,
-				3BA81722F8DD237F66F11C75 /* Pods-DYMRollingBanner_Tests.release.xcconfig */,
-				D10A4C1935F3ED4599FB49BC /* Pods.debug.xcconfig */,
-				A6F7E72F4FA1535D4415DC95 /* Pods.release.xcconfig */,
+				669198620A4683D080255E6B /* Pods-DYMRollingBanner_Example.debug.xcconfig */,
+				68462499E836ED56F2324899 /* Pods-DYMRollingBanner_Example.release.xcconfig */,
+				3B5DAEB00FA7827F804CF9CC /* Pods-DYMRollingBanner_Tests.debug.xcconfig */,
+				A9083D24F0FF84D0255285AF /* Pods-DYMRollingBanner_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -213,12 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "DYMRollingBanner_Example" */;
 			buildPhases = (
-				B2D346C6AD255BC6E96ABD41 /* Check Pods Manifest.lock */,
+				3E7FE44FBAC7B35406527D0B /* Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				237E2E253331D75F2B7183A0 /* Embed Pods Frameworks */,
-				3612B94F447E290703C7B740 /* Copy Pods Resources */,
+				1BE862F1475EEC43079BE67C /* Embed Pods Frameworks */,
+				E574085E9C1E10B3B71138AA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,12 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "DYMRollingBanner_Tests" */;
 			buildPhases = (
-				9EC10C1D117807CD005AF739 /* Check Pods Manifest.lock */,
+				0AB91A4FC75AD09B8FFD63C5 /* Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				73F658C4477EA251A7EAFD67 /* Embed Pods Frameworks */,
-				716F8974A1CAE34A0A22EC1A /* Copy Pods Resources */,
+				A430800191EA32DC4B73A980 /* Embed Pods Frameworks */,
+				65613E50E76DF85114207C95 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -290,7 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
-				EAB680E91C0F2A6400526E40 /* LaunchScreen.storyboard in Resources */,
+				EAAC3A081C0FD34A00AEFC8D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -307,7 +297,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		237E2E253331D75F2B7183A0 /* Embed Pods Frameworks */ = {
+		0AB91A4FC75AD09B8FFD63C5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1BE862F1475EEC43079BE67C /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -319,25 +324,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DYMRollingBanner_Example/Pods-DYMRollingBanner_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3612B94F447E290703C7B740 /* Copy Pods Resources */ = {
+		3E7FE44FBAC7B35406527D0B /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DYMRollingBanner_Example/Pods-DYMRollingBanner_Example-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		716F8974A1CAE34A0A22EC1A /* Copy Pods Resources */ = {
+		65613E50E76DF85114207C95 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,7 +357,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DYMRollingBanner_Tests/Pods-DYMRollingBanner_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		73F658C4477EA251A7EAFD67 /* Embed Pods Frameworks */ = {
+		A430800191EA32DC4B73A980 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,34 +372,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DYMRollingBanner_Tests/Pods-DYMRollingBanner_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9EC10C1D117807CD005AF739 /* Check Pods Manifest.lock */ = {
+		E574085E9C1E10B3B71138AA /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B2D346C6AD255BC6E96ABD41 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DYMRollingBanner_Example/Pods-DYMRollingBanner_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -522,18 +512,15 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB21D4F186DD0A42529D0E06 /* Pods-DYMRollingBanner_Example.debug.xcconfig */;
+			baseConfigurationReference = 669198620A4683D080255E6B /* Pods-DYMRollingBanner_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DYMRollingBanner/DYMRollingBanner-Prefix.pch";
 				INFOPLIST_FILE = "DYMRollingBanner/DYMRollingBanner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -542,18 +529,15 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAF1C99FFAEC0126B5E0E892 /* Pods-DYMRollingBanner_Example.release.xcconfig */;
+			baseConfigurationReference = 68462499E836ED56F2324899 /* Pods-DYMRollingBanner_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DYMRollingBanner/DYMRollingBanner-Prefix.pch";
 				INFOPLIST_FILE = "DYMRollingBanner/DYMRollingBanner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -562,7 +546,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36FD2FE3D45E74AF99EE2CAC /* Pods-DYMRollingBanner_Tests.debug.xcconfig */;
+			baseConfigurationReference = 3B5DAEB00FA7827F804CF9CC /* Pods-DYMRollingBanner_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -585,7 +569,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BA81722F8DD237F66F11C75 /* Pods-DYMRollingBanner_Tests.release.xcconfig */;
+			baseConfigurationReference = A9083D24F0FF84D0255285AF /* Pods-DYMRollingBanner_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

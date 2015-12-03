@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '18A4BF1ABEBE98F1A6F0AAF6'
+               BlueprintIdentifier = '94F54E3BFC6E7639A853C8A6'
                BlueprintName = 'DYMRollingBanner-DYMRollingBanner'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'DYMRollingBanner.bundle'>

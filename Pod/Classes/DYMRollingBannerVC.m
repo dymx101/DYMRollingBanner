@@ -41,6 +41,9 @@
 /// handler block for banner tapping
 @property (nonatomic, copy)     DYMBannderTapHandler    bannerTapHandler;
 
+/// image loading block
+@property (nonatomic, copy)     DYMBannerRemoteImageLoadingBlock    remoteImageLoadingBlock;
+
 @end
 
 @implementation DYMRollingBannerVC
@@ -86,10 +89,16 @@
     
     /// init first view controller and show it
     DYMBannerVC *vc = [_bannerPool dequeueBannerExclude:self.viewControllers];
-    vc.bannerTapHandler = [self tapHandlerForVC];
-    vc.image = _rollingImages.firstObject;
+    [self setupBannerVC:vc];
     
     [self setViewControllers:@[vc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+}
+
+-(void)setupBannerVC:(DYMBannerVC *)bannerVC {
+    bannerVC.bannerTapHandler = _bannerTapHandler;
+    bannerVC.remoteImageLoadingBlock = _remoteImageLoadingBlock;
+    bannerVC.image = _rollingImages.firstObject;
+    bannerVC.placeHolder = _placeHolderImage;
 }
 
 - (void)viewDidLoad {
@@ -139,8 +148,7 @@
     DYMBannerVC *nextVC = [self vcNextTo:currentVC beforeOrAfter:NO];
     if (nextVC == nil) {
         nextVC = [_bannerPool dequeueBannerExclude:self.viewControllers];
-        nextVC.bannerTapHandler = [self tapHandlerForVC];
-        nextVC.image = _rollingImages.firstObject;
+        [self setupBannerVC:nextVC];
     }
     
     __weak typeof(self) weakSelf = self;
@@ -168,6 +176,10 @@
     _bannerTapHandler = handler;
 }
 
+-(void)setRemoteImageLoadingBlock:(DYMBannerRemoteImageLoadingBlock)loadingBlock {
+    _remoteImageLoadingBlock = loadingBlock;
+}
+
 
 #pragma mark - helpers
 -(NSInteger)cycleChangeIndex:(NSInteger)index delta:(NSInteger)delta maxIndex:(NSInteger)maxIndex {
@@ -191,7 +203,7 @@
     }
     
     DYMBannerVC *nextVC = [_bannerPool dequeueBannerExclude:self.viewControllers];
-    nextVC.bannerTapHandler = [self tapHandlerForVC];
+    [self setupBannerVC:nextVC];
 
     
     NSString *imageURL = ((DYMBannerVC *)vc).image;
@@ -208,14 +220,14 @@
     return nil;
 }
 
--(DYMBannderTapHandler)tapHandlerForVC {
-    
-    return ^void(NSInteger index) {
-        if (_bannerTapHandler) {
-            _bannerTapHandler(index);
-        }
-    };
-}
+//-(DYMBannderTapHandler)tapHandlerForVC {
+//    
+//    return ^void(NSInteger index) {
+//        if (_bannerTapHandler) {
+//            _bannerTapHandler(index);
+//        }
+//    };
+//}
 
 
 #pragma mark -  UIPageViewControllerDataSource

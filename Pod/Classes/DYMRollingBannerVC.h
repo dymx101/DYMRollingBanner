@@ -34,6 +34,8 @@
 @property (nonatomic, copy)     NSArray                 *rollingImages;
 /// time interval between the rolling
 @property (nonatomic, assign)   NSTimeInterval          rollingInterval;
+/// the placeHolder image
+@property (nonatomic, copy)     UIImage                 *placeHolderImage;
 
 
 /// start rolling
@@ -44,6 +46,9 @@
 
 /// handler for banner tap event
 -(void)addBannerTapHandler:(DYMBannderTapHandler)handler;
+
+/// handler for banner tap event
+-(void)setRemoteImageLoadingBlock:(DYMBannerRemoteImageLoadingBlock)loadingBlock;
 
 @end
 

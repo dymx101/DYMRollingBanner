@@ -27,7 +27,7 @@
 
 
 #import "DYMBannerVC.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+
 
 @interface DYMBannerVC () {
 
@@ -79,17 +79,26 @@
     }
 }
 
+-(void)setImage:(id)image {
+    _image = image;
+    
+    [self loadImage];
+}
 
 -(void)loadImage {
     if ([_image isKindOfClass:[NSString class]]) {
         
-        [_imageView sd_cancelCurrentImageLoad];
-        [_imageView sd_setImageWithURL:[NSURL URLWithString:_image]
-                      placeholderImage:_placeHolder options:SDWebImageProgressiveDownload];
+        if (_remoteImageLoadingBlock) {
+            _remoteImageLoadingBlock(_imageView, _image, _placeHolder);
+        }
         
     } else if ([_image isKindOfClass:[UIImage class]]) {
         
         _imageView.image = _image;
+        
+    } else {
+        
+        _imageView.image = _placeHolder;
         
     }
 }
