@@ -76,6 +76,9 @@
 }
 
 -(void)_doInit {
+    
+    _infiniteScrollEnabled = YES;
+    
     _bannerPool = [[DYMBannerPool alloc] initWithSize:10];
     _pageControl = [[UIPageControl alloc] init];
 }
@@ -209,7 +212,17 @@
     NSString *imageURL = ((DYMBannerVC *)vc).image;
     NSInteger index = [_rollingImages indexOfObject:imageURL];
     if (index != NSNotFound) {
-        NSInteger nextIndex = [self cycleChangeIndex:index delta:(beforeOrAfter ? -1 : 1) maxIndex:_rollingImages.count - 1];
+        
+        NSInteger maxIndex = _rollingImages.count - 1;
+        
+        if (!_infiniteScrollEnabled) {
+            if ((index <= 0 && beforeOrAfter)
+                || (index >= maxIndex && !beforeOrAfter)) {
+                return nil;
+            }
+        }
+        
+        NSInteger nextIndex = [self cycleChangeIndex:index delta:(beforeOrAfter ? -1 : 1) maxIndex:maxIndex];
         
         nextVC.image = _rollingImages[nextIndex];
         nextVC.index = nextIndex;

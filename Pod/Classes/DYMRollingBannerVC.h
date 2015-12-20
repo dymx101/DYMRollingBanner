@@ -30,24 +30,30 @@
 
 /// The view controller which rolls a group of banner images
 @interface DYMRollingBannerVC : UIPageViewController
-/// images for the rolling banner, can be a remote URL or UIImage
-@property (nonatomic, copy)     NSArray                 *rollingImages;
-/// time interval between the rolling
-@property (nonatomic, assign)   NSTimeInterval          rollingInterval;
-/// the placeHolder image
-@property (nonatomic, copy)     UIImage                 *placeHolderImage;
+
+/// Images for the rolling banner, can be a remote URL or UIImage
+@property (nonatomic, copy)                     NSArray                 *rollingImages;
+
+/// Time interval between the rolling
+@property (nonatomic, assign)                   NSTimeInterval          rollingInterval;
+
+/// The placeHolder image
+@property (nonatomic, copy)                     UIImage                 *placeHolderImage;
+
+/// Enable/disable infinite scrolling
+@property (nonatomic, assign)                   BOOL                    infiniteScrollEnabled;
 
 
-/// start rolling
+/// Start rolling
 -(void)startRolling;
 
-/// stop rolling
+/// Stop rolling
 -(void)stopRolling;
 
-/// handler for banner tap event
+/// Handler for banner tap event
 -(void)addBannerTapHandler:(DYMBannderTapHandler)handler;
 
-/// handler for banner tap event
+/// Handler for banner tap event
 -(void)setRemoteImageLoadingBlock:(DYMBannerRemoteImageLoadingBlock)loadingBlock;
 
 @end

@@ -37,17 +37,19 @@ typedef void(^DYMBannerRemoteImageLoadingBlock)(UIImageView *imageView, NSString
 /// Banner view controller to show a banner image
 @interface DYMBannerVC : UIViewController
 
-/// placeHolder for the banner image
+/// PlaceHolder for the banner image
 @property (nonatomic, strong)                   UIImage                 *placeHolder;
-/// image for the banner, can be a URL or UIImage
+
+/// Image for the banner, can be a URL or UIImage
 @property (nonatomic, copy)                     id                      image;
-/// temporarily save the current index of the banner
+
+/// Temporarily save the current index of the banner
 @property (nonatomic, assign)                   NSInteger               index;
 
-/// handler block for banner tapping
+/// Handler block for banner tapping
 @property (nonatomic, copy)                     DYMBannderTapHandler    bannerTapHandler;
 
-/// image loading block
+/// Reomte image loading block
 @property (nonatomic, copy)                     DYMBannerRemoteImageLoadingBlock    remoteImageLoadingBlock;
 
 @end
