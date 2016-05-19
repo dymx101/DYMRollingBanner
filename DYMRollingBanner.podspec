@@ -27,7 +27,7 @@ s.author           = { "Yiming Dong" => "dymx101@hotmail.com" }
 s.source           = { :git => "https://github.com/dymx101/DYMRollingBanner.git", :tag => s.version.to_s }
 # s.social_media_url = 'https://twitter.com/dymx101'
 
-s.platform     = :ios, '8.0'
+s.platform     = :ios, '7.0'
 s.requires_arc = true
 
 s.source_files = 'Pod/Classes/**/*'
