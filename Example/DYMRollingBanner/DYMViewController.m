@@ -53,10 +53,10 @@
             NSLog(@"banner tapped, index = %@", @(whichIndex));
         }];
         
-        // 6.
+        // 6. If 'YES', the auto scrolling will scroll to the right
         vc.isAutoScrollingBackward = YES;
         
-        // 6. start auto rolling (optional, default does not auto roll)
+        // 7. start auto rolling (optional, default does not auto roll)
         [vc startRolling];
     }
 }
