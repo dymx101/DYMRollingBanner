@@ -24,7 +24,7 @@ Why do I write this ? Well...actually, I've been searching for a scrolling banne
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like `DYMRollingBanner` in your projects. Simply add the following line to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
 
 ```ruby
-pod 'DYMRollingBanner', '~> 2.1.6'
+pod 'DYMRollingBanner', '~> 2.1.7'
 ```
 ### (direct installation)
 Just copy these source files into you project:
@@ -93,7 +93,10 @@ Finally, feed it with you image URLs or `UIImage` object:
             NSLog(@"banner tapped, index = %@", @(whichIndex));
         }];
         
-        // 6. start auto rolling (optional, default does not auto roll)
+        // 6. If 'YES', the auto scrolling will scroll to the right
+        vc.isAutoScrollingBackward = YES;
+        
+        // 7. start auto rolling (optional, default does not auto roll)
         [_rollingBannerVC startRolling];
 ```
 And you are good to go!  
