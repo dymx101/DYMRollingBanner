@@ -7,15 +7,15 @@
 Why do I write this ? Well...actually, I've been searching for a scrolling banner view at github for a while, but no luck since some of the code I found are too old to support `Autolayout`, others don't scrolls infinitely... none of them satisfied me. Then,  I decided to do it myself, to write a good one...and here you go...
 
 ## Features  
-* Infinite scrolling, which mean it  return to show the first banner when ended with the last one.     
-* Supports both local and remote images.    
+* Infinite scrolling, which mean it shows banners/images in a infinite loop.
+* Can Scroll automatically, the intervals and the direction of the scrolling is configurable.
+* Supports both local and remote images.
+* Placeholder image is customizable, Remote image fetch method is also cusomizable.  
 * Paused on dragging and resumes on releasing when it's auto rolling.    
-* Implemented a memory cache which makes it lightning fast and less memory consuming.     
+* Have a memory cache which makes it lightning fast and less memory consuming.     
 * Block based event handling.    
 * 100% compatible with `AutoLayout`.  
 * Writen with clean code and very easy to use.     
-* Placeholder image is customizable.    
-* Remote image fetcher is cusomizable.    
 
 ## Installation 
 
@@ -24,7 +24,7 @@ Why do I write this ? Well...actually, I've been searching for a scrolling banne
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like `DYMRollingBanner` in your projects. Simply add the following line to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
 
 ```ruby
-pod 'DYMRollingBanner', '~> 2.1.6'
+pod 'DYMRollingBanner', '~> 2.1.7'
 ```
 ### (direct installation)
 Just copy these source files into you project:
@@ -93,7 +93,10 @@ Finally, feed it with you image URLs or `UIImage` object:
             NSLog(@"banner tapped, index = %@", @(whichIndex));
         }];
         
-        // 6. start auto rolling (optional, default does not auto roll)
+        // 6. If 'YES', the auto scrolling will scroll to the right
+        vc.isAutoScrollingBackward = YES;
+        
+        // 7. start auto rolling (optional, default does not auto roll)
         [_rollingBannerVC startRolling];
 ```
 And you are good to go!  
