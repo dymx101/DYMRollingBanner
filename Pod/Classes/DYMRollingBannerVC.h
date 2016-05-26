@@ -43,6 +43,8 @@
 /// Enable/disable infinite scrolling
 @property (nonatomic, assign)                   BOOL                    infiniteScrollEnabled;
 
+/// Background color when it reveals the scrollview edge, default value is black
+@property (nonatomic, strong)                   UIColor                  *edgeBackgroundColor;
 
 /// Start rolling
 -(void)startRolling;

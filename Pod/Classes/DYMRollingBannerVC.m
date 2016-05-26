@@ -81,11 +81,33 @@
     
     _bannerPool = [[DYMBannerPool alloc] initWithSize:10];
     _pageControl = [[UIPageControl alloc] init];
+    [_pageControl addTarget:self action:@selector(pageControlTapped:) forControlEvents:UIControlEventValueChanged];
+    
+    self.edgeBackgroundColor = [UIColor blackColor];
+}
+
+#pragma mark - page control
+- (void)pageControlTapped:(UIPageControl *)pageControl {
+    NSLog(@"%@", @(pageControl.currentPage));
+    /// TODO: Handle the page controll tap event
+}
+
+#pragma mark -
+- (void)setEdgeBackgroundColor:(UIColor *)edgeBackgroundColor {
+    _edgeBackgroundColor = edgeBackgroundColor;
+    
+    for (UIView *view in self.view.subviews) {
+        if ([view isKindOfClass:[NSClassFromString(@"_UIQueuingScrollView") class]]) {
+            view.backgroundColor = _edgeBackgroundColor;
+        }
+    }
 }
 
 -(void)setRollingImages:(NSArray *)rollingImages {
     
     _rollingImages = rollingImages;
+    
+    _pageControl.hidden = (_rollingImages.count <= 1);
     
     /// set page count
     _pageControl.numberOfPages = _rollingImages.count;
@@ -147,6 +169,11 @@
 }
 
 -(void)doRolling {
+    
+    if (_rollingImages.count <= 1) {
+        return;
+    }
+    
     DYMBannerVC *currentVC = (DYMBannerVC *)self.viewControllers.firstObject;
     DYMBannerVC *nextVC = [self vcNextTo:currentVC beforeOrAfter:NO];
     if (nextVC == nil) {
@@ -248,12 +275,20 @@
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
       viewControllerBeforeViewController:(UIViewController *)viewController {
 
+    if (_rollingImages.count <= 1) {
+        return nil;
+    }
+    
     return [self vcNextTo:viewController beforeOrAfter:YES];
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
        viewControllerAfterViewController:(UIViewController *)viewController {
 
+    if (_rollingImages.count <= 1) {
+        return nil;
+    }
+    
     return [self vcNextTo:viewController beforeOrAfter:NO];
 }
 
