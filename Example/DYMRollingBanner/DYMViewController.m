@@ -34,13 +34,13 @@
         // 2. set the placeholder image (optional, the default place holder is nil)
         vc.placeHolderImage = [UIImage imageNamed:@"default"];
         
-        // 2. define the way how you load the image from a remote url
+        // 3. define the way how you load the image from a remote url
         [vc setRemoteImageLoadingBlock:^(UIImageView *imageView, NSString *imageUrlStr, UIImage *placeHolderImage) {
             [imageView sd_cancelCurrentImageLoad];
             [imageView sd_setImageWithURL:[NSURL URLWithString:imageUrlStr] placeholderImage:placeHolderImage options:SDWebImageProgressiveDownload];
         }];
         
-        // 3. setup the rolling images
+        // 4. setup the rolling images
         vc.rollingImages = @[@"http://easyread.ph.126.net/G8GtEi-zmPQzvS5w7ScxmQ==/7806606224489671909.jpg"
                              , @"http://www.qqpk.cn/Article/UploadFiles/201312/20131212154331984.jpg"
                              , @"http://epaper.syd.com.cn/sywb/res/1/20080108/42241199752656275.jpg"
@@ -48,12 +48,15 @@
                              , [UIImage imageNamed:@"002"]
                              ];
         
-        // 4. add a handler when a tap event occours (optional, default do noting)
+        // 5. add a handler when a tap event occours (optional, default do noting)
         [vc addBannerTapHandler:^(NSInteger whichIndex) {
             NSLog(@"banner tapped, index = %@", @(whichIndex));
         }];
         
-        // 5. start auto rolling (optional, default does not auto roll)
+        // 6.
+        vc.isAutoScrollingBackward = YES;
+        
+        // 6. start auto rolling (optional, default does not auto roll)
         [vc startRolling];
     }
 }
