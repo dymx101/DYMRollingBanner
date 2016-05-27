@@ -75,6 +75,9 @@ Finally, feed it with you image URLs or `UIImage` object:
                              , [UIImage imageNamed:@"001"]
                              , [UIImage imageNamed:@"002"]
                              ];
+                             
+        // Start auto rolling (optional, default does not auto roll)
+        [_rollingBannerVC startRolling];
 ```
 And you are good to go!  
 
@@ -99,9 +102,6 @@ You can also do many customizations to it (they are optional):
         
         // If 'YES', the auto scrolling will scroll to the right
         vc.isAutoScrollingBackward = YES;
-        
-        // Start auto rolling (optional, default does not auto roll)
-        [_rollingBannerVC startRolling];
 ```
 
 ## Associated Classes   
