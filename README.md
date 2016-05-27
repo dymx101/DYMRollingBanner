@@ -8,7 +8,7 @@ Why do I write this ? Well...actually, I've been searching for a scrolling banne
 
 ## Features  
 * Infinite scrolling, which mean it shows banners/images in a infinite loop.
-* Can Scroll automatically, the intervals and the direction of the scrolling is configurable.
+* Can scroll automatically, the intervals and the direction of the scrolling is configurable.
 * Supports both local and remote images.
 * Placeholder image is customizable, Remote image fetch method is also cusomizable.  
 * Paused on dragging and resumes on releasing when it's auto rolling.    
@@ -68,38 +68,41 @@ Then, add the `DYMRollingBannerVC` object as the child view controller of the ho
 
 Finally, feed it with you image URLs or `UIImage` object:       
 ```objective-c
-// 1. Set the inteval for rolling (optional, the default value is 1 sec)
-        _rollingBannerVC.rollingInterval = 5;
-        
-        // 2. set the placeholder image (optional, the default place holder is nil)
-        _rollingBannerVC.placeHolderImage = [UIImage imageNamed:@"default"];
-        
-        // 3. define the way how you load the image from a remote url
-        [_rollingBannerVC setRemoteImageLoadingBlock:^(UIImageView *imageView, NSString *imageUrlStr, UIImage *placeHolderImage) {
-            [imageView sd_cancelCurrentImageLoad];
-            [imageView sd_setImageWithURL:[NSURL URLWithString:imageUrlStr] placeholderImage:placeHolderImage options:SDWebImageProgressiveDownload];
-        }];
-        
-        // 4. setup the rolling images
+        // setup the rolling images
         _rollingBannerVC.rollingImages = @[@"http://easyread.ph.126.net/G8GtEi-zmPQzvS5w7ScxmQ==/7806606224489671909.jpg"
                              , @"https://c2.staticflickr.com/4/3345/5832660048_55f8b0935b.jpg"
                              , @"http://epaper.syd.com.cn/sywb/res/1/20080108/42241199752656275.jpg"
                              , [UIImage imageNamed:@"001"]
                              , [UIImage imageNamed:@"002"]
                              ];
+```
+And you are good to go!  
+
+You can also do many customizations to it (they are optional):       
+```objective-c
+        // Set the inteval for rolling (optional, the default value is 1 sec)
+        _rollingBannerVC.rollingInterval = 5;
         
-        // 5. add a handler when a tap event occours (optional, default do noting)
+        // Set the placeholder image (optional, the default place holder is nil)
+        _rollingBannerVC.placeHolderImage = [UIImage imageNamed:@"default"];
+        
+        // Define the way how you load the image from a remote url
+        [_rollingBannerVC setRemoteImageLoadingBlock:^(UIImageView *imageView, NSString *imageUrlStr, UIImage *placeHolderImage) {
+            [imageView sd_cancelCurrentImageLoad];
+            [imageView sd_setImageWithURL:[NSURL URLWithString:imageUrlStr] placeholderImage:placeHolderImage options:SDWebImageProgressiveDownload];
+        }];
+        
+        // Add a handler when a tap event occours (optional, default do noting)
         [_rollingBannerVC addBannerTapHandler:^(NSInteger whichIndex) {
             NSLog(@"banner tapped, index = %@", @(whichIndex));
         }];
         
-        // 6. If 'YES', the auto scrolling will scroll to the right
+        // If 'YES', the auto scrolling will scroll to the right
         vc.isAutoScrollingBackward = YES;
         
-        // 7. start auto rolling (optional, default does not auto roll)
+        // Start auto rolling (optional, default does not auto roll)
         [_rollingBannerVC startRolling];
 ```
-And you are good to go!  
 
 ## Associated Classes   
 * `DYMRollingBannerVC` is the view controller which rolls a group of banner images.   
